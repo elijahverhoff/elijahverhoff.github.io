@@ -11,5 +11,5 @@ skills:
 - Project management & planning
 - Client communicaation
 - Solenoid valves
-main-image: /project.webp 
+main-image: /headerComp.webp 
 ---
