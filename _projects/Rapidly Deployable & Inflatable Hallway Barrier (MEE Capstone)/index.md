@@ -17,8 +17,42 @@ main-image: /headerComp.webp
 To satisfy the objectives of this complex multidimensional project, our team elected to designate leads for various aspects of design and manufacturing based on each person's strengths. I was delegated as the lead for controls, research / technical writing, and client communication.
 
 ## Controls
-An imperitive attribute of the barrier is that it must be deployable by a single, untrained end-user as quickly as possible. With only user activation required, I developed a safety-critical system which autonomously controls barrier deployment through a series of states with a behavior model in Arduino IDE. This system directs the flow of compressed air at 2000psi with solenoid valves to various pneumatic components, and receives feedback from inline pressure transducers to determine when to switch states. The order of states is as follows:
+An imperitive attribute of the barrier is that it must be deployable by a single, untrained end-user as quickly as possible. With only user activation required, I developed a safety-critical system which autonomously controls barrier deployment through a series of states with a behavior model in Arduino IDE. This system directs the flow of compressed air at 2000psi with solenoid valves to various pneumatic components, and receives feedback from inline pressure transducers to determine when to switch states.
+
+### Phases of Deployment
 1. **Stabilizer deployment.** Air is directed to pneumatic actuators which deploy stabilizers located on the base of the barrier system. Once feedback is received that indicates the stabilizing actuators have reached an overshoot of +10% of its specified "lifting pressure," it is assumed that they have begun pushing against walls of the hallway. The solenoid valve which directs airflow to the stabilizers is closed, and the control loop then switches to the next phase.
 2. **Linkage system deployment.** Solenoid valve 2 opens, directing airflow to the linkage system, also actuated by pneumatic cylinders. Similarly, once the pressure transducer measuring the pressure within the cylinder reports an overshoot of +20% of its lifting pressure, it closes solenoid valve 2 and we move to the next phase of deployment.
 3. **Airbag deployment.** With each tributary path closed, airflow is directed to a manifold which in turn directs airflow to 10 separate chambers within the airbag. Once the pressure transducer measuring the pressure of the line connected to the highest airbag reports an internal pressure of 5 psi the system moves to the final state of deployment.
 4. **Maintenance.** The control system monitors feedback from each pressure transducer. If any cylinder has its internal pressure reduced below its lifting pressure, the solenoid valve which directs flow to that cylinder is reopened until initial deployment conditions are met again.
+
+Debug and operational data is output to an 16x2 LCD, as well as the current state being executed.
+```C++
+    switch (state) {
+      case 1: // Solenoid CLOSED until P1 ≥ 100 psi
+        digitalWrite(relay_3, LOW); // Solenoid closed
+        if (pressure_1 >= targetPressure1) {
+          Serial.println("Case 1 complete: P1 ≥ 100 psi");
+          state = 2;
+          stateStartTime = currentMillis;
+        }
+        break;
+
+      case 2: // Solenoid OPEN until P2 ≥ 100 psi
+        digitalWrite(relay_3, HIGH); // Solenoid open
+        if (pressure_2 >= targetPressure2) {
+          Serial.println("Case 2 complete: P2 ≥ 100 psi");
+          state = 3;
+          stateStartTime = currentMillis;
+        }
+        break;
+
+      case 3: // Solenoid OPEN indefinitely
+        digitalWrite(relay_3, HIGH); // Keep solenoid open
+        break;
+
+      default:
+        Serial.println("Unknown state. Resetting.");
+        resetSystem();
+        break;
+    }
+```
