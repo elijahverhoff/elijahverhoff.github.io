@@ -7,17 +7,24 @@
 
 # Main Page Setup
 
-title: John Doe's Portfolio # This is what shows up in the tab of the browser
+title: Elijah Verhoff's Portfolio # This is what shows up in the tab of the browser
 
 
 
 # Hero Section
-name: John Doe
+name: Elijah Verhoff
 headline: headline message
 description: >- # dont remove this line. this will ignore all new lines until the next section
-  Write an awesome intro and discuss your highlights and qualification. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  I am a Mechanical Engineering student at the University of Maine in Orono, graduating in December of 2025. 
+  Currently, I'm working as a Student Specialist at the Advanced Structures and Composites Center, where I 
+  design electromechanical systems, research advanced composite structures, and author testing documentation 
+  to support design of experiment efforts. My academic background centers on mechanical design with a focus in 
+  robotics and controls, while my hobbies involve projects that combine the creativity of both engineering and 
+  the arts.
+
+  I am a strong communicator with proven teamwork and leadership experience in both technical and creative 
+  roles. I'm now seeking opportunities to apply my education in a robotics, automation, or cross-disciplinary 
+  engineering environment to start my career and grow my skills.
 
 # Place your profile image in /assets/images/profile-image/folder and edit the file name
 profile_image: ./assets/images/profile-image/avatar.jpeg
