@@ -27,20 +27,20 @@ description: >- # dont remove this line. this will ignore all new lines until th
   engineering environment to start my career and grow my skills.
 
 # Place your profile image in /assets/images/profile-image/folder and edit the file name
-profile_image: ./assets/images/profile-image/avatar.jpeg
+profile_image: ./assets/images/profile-image/Headshot.jpeg
 
 
 # Link your resume
 # You can place your resume in assets/resume/{resume.pdf or add external link such as pdf saved in google drive 
-resume-url: https://drive.google.com/file/d/13Z3duVzh-gguPU5r03oJVEE6rV9rd3DS/view?usp=sharing # or /assets/resume/resume.pdf
+resume-url: https://drive.google.com/file/d/1bVJIebLb8lNDVk0gvTOBDpicUm_N-A94/view?usp=drive_link # or /assets/resume/resume.pdf
 
 
 # Set up external links - this will show up as small icons next to your name.
 
 external-links:    # input only your own url slug. The icons with missing entries will not appear.
-  linkedin: test    # https://www.linkedin.com/in/{your url slug} 
-  github: leea12    # https://github.com/{your url slug} 
-  stackoverflow: test      # https://stackoverflow.com/users/{your url slug}
+  linkedin: elijah-verhoff-1b3674329/    # https://www.linkedin.com/in/{your url slug} 
+  github: elijahverhoff    # https://github.com/{your url slug} 
+  stackoverflow:    # https://stackoverflow.com/users/{your url slug}
   medium:            # https://medium.com/@{your url slug} 
   x-twitter:   # https://x.com/{your url slug} 
   threads:            # https://threads.net/@{your url slug} 
@@ -52,61 +52,59 @@ external-links:    # input only your own url slug. The icons with missing entrie
 
 # Skills Section - Add the list of your Skills by categories/tools. The indentation for each level needs to be precise. 
 skills:
-  - category: 3D Modeling
+  - category: 3D Modeling / Simulation
     tools:
-    - Onshape
     - Solidworks
-    - Creo
     - Fusion 360 (Autodesk)
-    - Blender (for complex shapes or animations)
-    - Siemens NX
     - Inventor (Autodesk)
-    - CATIA (Dassault Systèmes)
+    - Rhinoceros 3D
+    - Abaqus
+    - MATLAB Simulink / Simscape
+    - ITK-SNAP (Medical Image Analysis/Segmentation)
   - category: Prototyping
     tools:
     - SLA
-    - CNC
+    - CNC & manual machining
     - FDM
-    - SLS
-    - DMLS
-    - PolyJet Printing
-    - Vacuum Casting
-    - Laser Cutting
-    - Water Jet Cutting
+    - Large Area Additive Manufacturing (LAAM)
+    - Laser cutting
+    - Water Jet cutting
     - Arduino / Raspberry Pi
     - Breadboarding for circuit testing
   - category: Design Standards / Practices
     tools:
-    - GD&T ASME Y14
+    - GD&T ASME Y14.5
     - ISO fits and tolerances
-    - PLM (PTC Windchill / Arena)   
-  - category: PCB Design
+  - category: Programming Languages
     tools:
-    - Altium Designer
-    - Altium
-    - Eagle 
-    - KiCad
-  - category: Problem Solving / Risk Management
+    - Python
+    - C++
+    - Structured Text (ST)
+    - Ladder Diagram (LD)
+  - category: Robotics / Control Frameworks
     tools:
-    - Root Cause Analysis (e.g., 5 Whys, Fishbone Diagram)
-    - DFMEA / PFMEA 
-    - Six Sigma methodologies
-    - Shain Red-X
+    - ROS
+    - TwinCAT 3
+  - category: Computation / Data Analysis
+    tools:
+    - MATLAB
+    - Mathcad/SMath
+    - RStudio
 
 
 # Contact Form Setup. Setup an account and copy over the key. When someone fills out the form, it will be received in your email.
-formspree-key:   https://formspree.io/f/{8-digit key}
+formspree-key:   https://formspree.io/f/xkgpyywg
 
 
 
 # Active theme (Updatethis to switch themes). Make sure to keep the indentation the samne.
-colors: # this is the basic theme
-  text: "#1a1c20"
-  border: "#ddd"
-  link: "#4a76ee"
-  highlight: "#0c0cf2"
-  background: "#ffffff"
-  light_background: "#f3f5fb"
+colors: # this is the currently "lemon theme"
+  text: "#2d2926"
+  border: "#f7f3e3"
+  link: "#ffc94d"
+  highlight: "#ffb800"
+  background: "#fffdf5"
+  light_background: "#fff9e6"
 
 # A few examples. 
 basic theme:
