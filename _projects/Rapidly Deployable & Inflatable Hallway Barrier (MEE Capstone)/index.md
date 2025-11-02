@@ -28,7 +28,7 @@ An imperitive attribute of the barrier is that it must be deployable by a single
 Debug and operational data is output to an 16x2 LCD, as well as the current state being executed. Emergency stop and reset functions were added primarily for prototyping. Basic error handling is present to handle negative pressure readings, unexpected states, and timeouts.
 
 ### FSM
-```C++
+```cpp title="solenoidControl_V3.ino"
     switch (state) {
       case 1: // Solenoid CLOSED until P1 ≥ 100 psi
         digitalWrite(relay_3, LOW); // Solenoid closed
@@ -61,7 +61,7 @@ Debug and operational data is output to an 16x2 LCD, as well as the current stat
 
 ### Emergency Stop Monitoring
 The emergency stop runs independetly every loop iteration prior to the FSM to ensure the highest priority. It additionally contains a stable-hold condition which allows the system to reboot easily back to setup().
-```C++
+```cpp title="solenoidControl_V3.ino"
   if (digitalRead(emergency_stop) == LOW) {
     lcd.clear();
     lcd.setCursor(0, 0);
@@ -91,7 +91,7 @@ The emergency stop runs independetly every loop iteration prior to the FSM to en
 ```
 
 ### Reset Function
-```C++
+```cpp title="solenoidControl_V3.ino"
 void resetSystem() {
   static bool hasReset = false;
   if (!hasReset) {
@@ -102,5 +102,4 @@ void resetSystem() {
     Serial.println("Reset already performed. Aborting additional reset.");
   }
 }
-
 ```
