@@ -155,6 +155,4 @@ void resetSystem() {
 
 ### Circuit Diagram
 
-test test yadda yadda
-
 {% include image-gallery.html images="circuitDiagram.webp" height="400" %}
