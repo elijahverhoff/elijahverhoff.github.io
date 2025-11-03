@@ -1,32 +1,27 @@
-.page ol,
-.page ul,
-.post-view ol,
-.post-view ul {
-  font-size: 1rem;
+/* Set a consistent base reading size for content areas */
+.page, .post-view, .content, article {
+  font-size: 1rem;       /* or 100% if you prefer to inherit from body */
   line-height: 1.6;
 }
 
-.page li,
-.post-view li {
+/* Make lists match surrounding text instead of forcing a larger size */
+.page ol, .page ul,
+.post-view ol, .post-view ul,
+.content ol, .content ul,
+article ol, article ul {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+/* Tweak list item spacing */
+.page li, .post-view li, .content li, article li {
   margin: 0.4rem 0;
 }
 
-.page h1 + ol,
-.page h2 + ol,
-.page h3 + ol,
-.page h4 + ol,
-.page h1 + ul,
-.page h2 + ul,
-.page h3 + ul,
-.page h4 + ul,
-.post-view h1 + ol,
-.post-view h2 + ol,
-.post-view h3 + ol,
-.post-view h4 + ol,
-.post-view h1 + ul,
-.post-view h2 + ul,
-.post-view h3 + ul,
-.post-view h4 + ul {
-  font-size: inherit;
-  line-height: inherit;
+/* Optional: slightly reduce nested lists */
+.page li > ol, .page li > ul,
+.post-view li > ol, .post-view li > ul,
+.content li > ol, .content li > ul,
+article li > ol, article li > ul {
+  font-size: 0.95em;
 }
