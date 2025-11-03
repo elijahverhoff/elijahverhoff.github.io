@@ -152,9 +152,14 @@ void resetSystem() {
 ```
 
 
+
 ### Circuit Diagram
 
-{% include image-gallery.html images="circuitDiagram.webp" height="400" %}
+test test yadda yadda
+
+{% include image-gallery.html images="images/test.jpg" height="400" %}
+
+
 
 ![Test Image](circuitDiagram.webp)
 
