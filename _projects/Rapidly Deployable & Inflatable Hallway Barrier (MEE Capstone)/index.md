@@ -33,7 +33,7 @@ An imperitive attribute of the barrier is that it must be deployable by a single
 3. **Airbag deployment.** With each tributary path closed, airflow is directed to a manifold which in turn directs airflow to 10 separate chambers within the airbag. Once the pressure transducer measuring the pressure of the line connected to the highest airbag reports an internal pressure of 5 psi the system moves to the final state of deployment.
 4. **Maintenance.** The control system monitors feedback from each pressure transducer. If any cylinder has its internal pressure reduced below its lifting pressure, the solenoid valve which directs flow to that cylinder is reopened until initial deployment conditions are met again.
 
-Debug and operational data is output to an 16x2 LCD, as well as the current state being executed. Emergency stop and reset functions were added primarily for prototyping. Basic error handling is present to handle negative pressure readings, unexpected states, and timeouts.
+The current state being executed and debug / operational data are output to a 16x2 LCD. Emergency stop handling is included as a safety precaution, and a reset function was added primarily for quick prototyping. Basic error handling is present to handle negative pressure readings, unexpected states, and timeouts.
 
 
 
