@@ -1,22 +1,32 @@
-/* Normalize list typography */
-.post-content ol,
-.post-content ul {
-  font-size: 1rem;           /* or 100% or inherit */
+.page ol,
+.page ul,
+.post-view ol,
+.post-view ul {
+  font-size: 1rem;
   line-height: 1.6;
-  margin-left: 1.25rem;      /* tweak if bullets/nums look too indented */
 }
 
-.post-content li { margin: 0.4rem 0; }
+.page li,
+.post-view li {
+  margin: 0.4rem 0;
+}
 
-/* If your CSS is bumping lists right after headings, neutralize that */
-.post-content h1 + ol,
-.post-content h2 + ol,
-.post-content h3 + ol,
-.post-content h4 + ol,
-.post-content h1 + ul,
-.post-content h2 + ul,
-.post-content h3 + ul,
-.post-content h4 + ul {
+.page h1 + ol,
+.page h2 + ol,
+.page h3 + ol,
+.page h4 + ol,
+.page h1 + ul,
+.page h2 + ul,
+.page h3 + ul,
+.page h4 + ul,
+.post-view h1 + ol,
+.post-view h2 + ol,
+.post-view h3 + ol,
+.post-view h4 + ol,
+.post-view h1 + ul,
+.post-view h2 + ul,
+.post-view h3 + ul,
+.post-view h4 + ul {
   font-size: inherit;
   line-height: inherit;
 }
