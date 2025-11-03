@@ -1,20 +1,11 @@
-/* Match list text size to surrounding paragraph text */
-.post-view .content ol,
-.post-view .content ul,
-.page .content ol,
-.page .content ul {
-  font-size: inherit;
-  line-height: inherit;
-}
-
-/* 1) Set a single baseline on the Markdown content container */
+/* Set one baseline on the Markdown content container */
 .post-view .content,
 .page .content {
-  font-size: 1rem;      /* your site’s base reading size */
+  font-size: 1rem;
   line-height: 1.6;
 }
 
-/* 2) Make paragraphs and lists inherit that baseline exactly */
+/* Make paragraphs and lists exactly match the container */
 .post-view .content p,
 .page .content p,
 .post-view .content ol,
@@ -23,6 +14,6 @@
 .page .content ul,
 .post-view .content li,
 .page .content li {
-  font-size: 1em;       /* inherit from the container */
+  font-size: 1em;
   line-height: inherit;
 }
