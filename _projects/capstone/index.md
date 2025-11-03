@@ -159,9 +159,17 @@ void resetSystem() {
 
 
 
+---
+
+
+
 ## Research & Technical Writing
 
 Led systems-level research synthesis to unify team literature reviews into a single cohesive design direction. Conducted preliminary research on the structural mechanics of the barrier system and integrated supporting analyses on materials, propellants, plumbing, and housing solutions. Authored the team’s performance modeling and technical documentation to inform final design decisions for our conceptual design report.
+
+
+
+---
 
 
 
