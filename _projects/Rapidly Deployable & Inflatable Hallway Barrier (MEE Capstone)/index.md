@@ -157,7 +157,7 @@ void resetSystem() {
 
 test test yadda yadda
 
-{% include image-gallery.html images="images/test.jpg" height="400" %}
+{% include image-gallery.html images="images/circuitDiagram.webp" height="400" %}
 
 
 
