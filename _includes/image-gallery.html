@@ -1,5 +1,6 @@
 {% assign image_paths = include.images | split: ", " %}
 {% assign gallery_height = include.height | default: "300" %}
+{% assign gallery_width = include.width | default: "auto" %}
 
 <div class="image-gallery" style="--gallery-height: {{ gallery_height }}px;">
   {% for image_path in image_paths %}
@@ -9,13 +10,15 @@
               src="{{ image_name }}"
               alt="Web image"
               loading="lazy"
+              style="width: {{ gallery_width }}; height: {{ gallery_height }}px; object-fit: contain;"
           />
       {% else %}
           {% assign page_url_without_index = page.url | remove: 'index' | remove: '.html' %}
           <img 
               src="{{ page_url_without_index }}{{ image_name }}" 
-              alt="{{image_name}}"
+              alt="{{ image_name }}"
               loading="lazy"
+              style="width: {{ gallery_width }}; height: {{ gallery_height }}px; object-fit: contain;"
               onerror="this.onerror=null;this.src=this.src.replace('.webp','.png').replace('.png','.webp');"
           />
       {% endif %}
