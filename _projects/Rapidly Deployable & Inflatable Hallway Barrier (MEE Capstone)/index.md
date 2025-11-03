@@ -64,32 +64,32 @@ switch (state) {
 The emergency stop runs independetly every loop iteration prior to the FSM to ensure the highest priority. It additionally contains a stable-hold condition which allows the system to reboot easily back to setup().
 
 ```cpp
-  if (digitalRead(emergency_stop) == LOW) {
-    lcd.clear();
-    lcd.setCursor(0, 0);
-    lcd.print("EMERGENCY STOP");
-    Serial.println("EMERGENCY STOP");
-    digitalWrite(relay_3, LOW); // Close solenoid
+if (digitalRead(emergency_stop) == LOW) {
+  lcd.clear();
+  lcd.setCursor(0, 0);
+  lcd.print("EMERGENCY STOP");
+  Serial.println("EMERGENCY STOP");
+  digitalWrite(relay_3, LOW); // Close solenoid
 
-    unsigned long holdStart = millis(); // stable hold conditional restart
-    while (millis() - holdStart < 10000) {
-      if (digitalRead(emergency_stop) == HIGH) {
-        holdStart = millis();
-      }
-      if (millis() - holdStart >= 1000) {
-        lcd.clear();
-        lcd.setCursor(0, 0);
-        lcd.print("RESETTING...");
-        delay(1000);
-        resetSystem();
-        break;
-      }
+  unsigned long holdStart = millis(); // stable hold conditional restart
+  while (millis() - holdStart < 10000) {
+    if (digitalRead(emergency_stop) == HIGH) {
+      holdStart = millis();
     }
-    lcd.clear();
-    lcd.setCursor(0, 0);
-    lcd.print("STOP TIMEOUT");
-    delay(2000);
+    if (millis() - holdStart >= 1000) {
+      lcd.clear();
+      lcd.setCursor(0, 0);
+      lcd.print("RESETTING...");
+      delay(1000);
+      resetSystem();
+      break;
+    }
   }
+  lcd.clear();
+  lcd.setCursor(0, 0);
+  lcd.print("STOP TIMEOUT");
+  delay(2000);
+}
 ```
 
 ### Reset Function
