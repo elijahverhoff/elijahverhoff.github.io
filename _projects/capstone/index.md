@@ -169,6 +169,18 @@ Led systems-level research synthesis to unify team literature reviews into a sin
 
 
 
+### Analysis of Loading Conditions
+
+{% include image-gallery.html images="case1.png, case2.png" height="400"%}
+
+
+
+### Modeling Material Performance
+
+{% include image-gallery.html images="plot1.png" height="400" %}
+
+
+
 ---
 
 
