@@ -3,7 +3,7 @@ layout: post
 title: Rapidly Deployable & Inflatable Hallway Barrier
 description:  Tasked by Sandia National Laboratories to design a lightweight inflatable barrier to interrupt/disrupt the movement of personnel at strategic chokepoints for indoor applications. Worked alongside five other hardworking engineering undergraduate capstone students to research, design, and manufacture a barrier system to deliver to our client over the course of two semesters.
 skills: 
-- Control systems design
+- Control system design
 - Finite State Machines
 - Electro-pneumatics
 - Literature review
@@ -156,3 +156,15 @@ void resetSystem() {
 ### Circuit Diagram
 
 {% include image-gallery.html images="circuitDiagram.webp" height="400" %}
+
+
+
+## Research & Technical Writing
+
+Led systems-level research synthesis to unify team literature reviews into a single cohesive design direction. Conducted preliminary research on the structural mechanics of the barrier system and integrated supporting analyses on materials, propellants, plumbing, and housing solutions. Authored the team’s performance modeling and technical documentation to inform final design decisions for our conceptual design report.
+
+
+
+## Communication
+
+Scheduled and coordinated meetings with our client from Sandia National Laboratories to solidly define project objectives, constraints, and goals. Ensured consistent updates of the project's progress and timeline were passed along to the client.
