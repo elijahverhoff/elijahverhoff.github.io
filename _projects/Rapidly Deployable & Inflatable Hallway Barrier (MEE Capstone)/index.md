@@ -156,5 +156,9 @@ void resetSystem() {
 
 {% include image-gallery.html images="circuitDiagram.webp" height="400" %}
 
+![Test Image](circuitDiagram.webp)
+
+
+
 
 
