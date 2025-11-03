@@ -157,4 +157,4 @@ void resetSystem() {
 
 test test yadda yadda
 
-{% include image-gallery.html images="images/circuitDiagram.webp" height="400" %}
+{% include image-gallery.html images="assets/images/projects/Capstone/circuitDiagram.webp" height="400" %}
