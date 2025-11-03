@@ -158,12 +158,3 @@ void resetSystem() {
 test test yadda yadda
 
 {% include image-gallery.html images="images/circuitDiagram.webp" height="400" %}
-
-
-
-![Test Image](circuitDiagram.webp)
-
-
-
-
-
