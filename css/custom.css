@@ -43,6 +43,26 @@
   line-height: 1.6;
 }
 
+/* Slightly tighter spacing for dense lists */
+.post-view .content li,
+.page .content li { margin: 0.3rem 0; }
+
+/* Indent nested lists a bit more for clarity */
+.post-view .content li > ol,
+.post-view .content li > ul,
+.page .content li > ol,
+.page .content li > ul { margin-left: 1.2rem; }
+
+/* Comfortable spacing after headings before a list/paragraph */
+.post-view .content h2,
+.page .content h2 { margin: 1.2rem 0 0.6rem; }
+.post-view .content h3,
+.page .content h3 { margin: 1rem 0 0.5rem; }
+
+/* Optional: slightly larger line-height inside code blocks for readability */
+.post-view .content pre code,
+.page .content pre code { line-height: 1.5; }
+
 /* Optional: nice spacing */
 .post-view .content li,
 .page .content li { margin: 0.4rem 0; }
