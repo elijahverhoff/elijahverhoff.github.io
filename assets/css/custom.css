@@ -1,0 +1,32 @@
+.page ol,
+.page ul,
+.post-view ol,
+.post-view ul {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.page li,
+.post-view li {
+  margin: 0.4rem 0;
+}
+
+.page h1 + ol,
+.page h2 + ol,
+.page h3 + ol,
+.page h4 + ol,
+.page h1 + ul,
+.page h2 + ul,
+.page h3 + ul,
+.page h4 + ul,
+.post-view h1 + ol,
+.post-view h2 + ol,
+.post-view h3 + ol,
+.post-view h4 + ol,
+.post-view h1 + ul,
+.post-view h2 + ul,
+.post-view h3 + ul,
+.post-view h4 + ul {
+  font-size: inherit;
+  line-height: inherit;
+}
