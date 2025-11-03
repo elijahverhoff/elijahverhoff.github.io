@@ -1,27 +1,48 @@
-/* Set a consistent base reading size for content areas */
-.page, .post-view, .content, article {
-  font-size: 1rem;       /* or 100% if you prefer to inherit from body */
+/* --- Normalize reading size INSIDE the Markdown body --- */
+
+/* 1) Set the base reading size for the Markdown container */
+.post-view .content,
+.page .content,
+.post-view article,
+.page article {
+  font-size: 1rem;
   line-height: 1.6;
 }
 
-/* Make lists match surrounding text instead of forcing a larger size */
-.page ol, .page ul,
-.post-view ol, .post-view ul,
-.content ol, .content ul,
-article ol, article ul {
-  font-size: inherit;
-  line-height: inherit;
+/* 2) Make paragraphs and list text match exactly */
+.post-view .content p,
+.page .content p,
+.post-view .content ol,
+.page .content ol,
+.post-view .content ul,
+.page .content ul,
+.post-view .content li,
+.page .content li {
+  font-size: 1em !important;   /* same as container */
+  line-height: 1.6;
 }
 
-/* Tweak list item spacing */
-.page li, .post-view li, .content li, article li {
-  margin: 0.4rem 0;
+/* 3) Prevent “big list after heading” rule from theme */
+.post-view .content h1 + ol,
+.post-view .content h2 + ol,
+.post-view .content h3 + ol,
+.post-view .content h4 + ol,
+.post-view .content h1 + ul,
+.post-view .content h2 + ul,
+.post-view .content h3 + ul,
+.post-view .content h4 + ul,
+.page .content h1 + ol,
+.page .content h2 + ol,
+.page .content h3 + ol,
+.page .content h4 + ol,
+.page .content h1 + ul,
+.page .content h2 + ul,
+.page .content h3 + ul,
+.page .content h4 + ul {
+  font-size: 1em !important;
+  line-height: 1.6;
 }
 
-/* Optional: slightly reduce nested lists */
-.page li > ol, .page li > ul,
-.post-view li > ol, .post-view li > ul,
-.content li > ol, .content li > ul,
-article li > ol, article li > ul {
-  font-size: 0.95em;
-}
+/* Optional: nice spacing */
+.post-view .content li,
+.page .content li { margin: 0.4rem 0; }
