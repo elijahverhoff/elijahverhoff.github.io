@@ -41,32 +41,61 @@ The current state being executed and debug / operational data are output to a 16
 
 ```cpp
 switch (state) {
-  case 1: // Solenoid CLOSED until P1 >= 100 psi
-    digitalWrite(relay_3, LOW);
-    if (pressure_1 >= targetPressure1) {
-      Serial.println("Case 1 complete: P1 >= 100 psi");
-      state = 2;
+
+    case 1: // Solenoid CLOSED until P1 ≥ 100 psi
+      digitalWrite(relay_3, LOW);
+      if (pressure_1 >= targetPressure1) {
+        Serial.println("Case 1 complete: P1 ≥ 100 psi");
+        state = 2;
+        stateStartTime = currentMillis;
+      }
+     break;
+
+    case 2: // Solenoid OPEN until P2 ≥ 100 psi
+      digitalWrite(relay_3, HIGH);
+      if (pressure_2 >= targetPressure2) {
+        Serial.println("Case 2 complete: P2 ≥ 100 psi");
+        state = 3;
+        stateStartTime = currentMillis;
+      }
+      break;
+
+    case 3: // Transition to maintenance mode
+      digitalWrite(relay_3, HIGH);
+      Serial.println("Entering Case 4: Maintenance Mode");
+      lcd.clear();
+      lcd.setCursor(0, 0);
+      lcd.print("MAINTENANCE");
+      state = 4;
       stateStartTime = currentMillis;
-    }
-    break;
+      break;
 
-  case 2: // Solenoid OPEN until P2 >= 100 psi
-    digitalWrite(relay_3, HIGH);
-    if (pressure_2 >= targetPressure2) {
-      Serial.println("Case 2 complete: P2 >= 100 psi");
-      state = 3;
-      stateStartTime = currentMillis;
-    }
-    break;
+    case 4: // --- Maintenance / monitoring ---
+     digitalWrite(relay_3, HIGH); // Keep solenoid open
 
-  case 3: // Solenoid OPEN indefinitely
-    digitalWrite(relay_3, HIGH);
-    break;
+      // Check for pressure drops below hysteresis threshold
+      if (pressure_1 < (targetPressure1 - hysteresis)) {
+        Serial.println("P1 dropped — reverting to Case 1");
+        lcd.clear();
+        lcd.setCursor(0, 0);
+        lcd.print("REVERT P1 -> C1");
+        state = 1;
+        stateStartTime = currentMillis;
+      }
+      else if (pressure_2 < (targetPressure2 - hysteresis)) {
+        Serial.println("P2 dropped — reverting to Case 2");
+        lcd.clear();
+        lcd.setCursor(0, 0);
+        lcd.print("REVERT P2 -> C2");
+        state = 2;
+        stateStartTime = currentMillis;
+      }
+      break;
 
-  default:
-    Serial.println("Unknown state. Resetting.");
-    resetSystem();
-    break;
+    default:
+      Serial.println("Unknown state. Resetting.");
+      resetSystem();
+      break;
 }
 ```
 
