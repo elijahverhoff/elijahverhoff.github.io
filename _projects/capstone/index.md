@@ -171,4 +171,4 @@ Scheduled and coordinated meetings with our client from Sandia National Laborato
 
 ### Manufacturing Timeline
 
-{% include image-gallery.html images="manufacturingTimeline.png" height="400" %}
+{% include image-gallery.html images="manufacturingFlowchart.png" height="400" %}
