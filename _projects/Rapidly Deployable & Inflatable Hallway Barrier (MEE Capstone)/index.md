@@ -28,40 +28,42 @@ An imperitive attribute of the barrier is that it must be deployable by a single
 Debug and operational data is output to an 16x2 LCD, as well as the current state being executed. Emergency stop and reset functions were added primarily for prototyping. Basic error handling is present to handle negative pressure readings, unexpected states, and timeouts.
 
 ### FSM
-```cpp title="solenoidControl_V3.ino"
-    switch (state) {
-      case 1: // Solenoid CLOSED until P1 ≥ 100 psi
-        digitalWrite(relay_3, LOW); // Solenoid closed
-        if (pressure_1 >= targetPressure1) {
-          Serial.println("Case 1 complete: P1 ≥ 100 psi");
-          state = 2;
-          stateStartTime = currentMillis;
-        }
-        break;
 
-      case 2: // Solenoid OPEN until P2 ≥ 100 psi
-        digitalWrite(relay_3, HIGH); // Solenoid open
-        if (pressure_2 >= targetPressure2) {
-          Serial.println("Case 2 complete: P2 ≥ 100 psi");
-          state = 3;
-          stateStartTime = currentMillis;
-        }
-        break;
-
-      case 3: // Solenoid OPEN indefinitely
-        digitalWrite(relay_3, HIGH); // Keep solenoid open
-        break;
-
-      default:
-        Serial.println("Unknown state. Resetting.");
-        resetSystem();
-        break;
+```cpp
+switch (state) {
+  case 1: // Solenoid CLOSED until P1 >= 100 psi
+    digitalWrite(relay_3, LOW);
+    if (pressure_1 >= targetPressure1) {
+      Serial.println("Case 1 complete: P1 >= 100 psi");
+      state = 2;
+      stateStartTime = currentMillis;
     }
+    break;
+
+  case 2: // Solenoid OPEN until P2 >= 100 psi
+    digitalWrite(relay_3, HIGH);
+    if (pressure_2 >= targetPressure2) {
+      Serial.println("Case 2 complete: P2 >= 100 psi");
+      state = 3;
+      stateStartTime = currentMillis;
+    }
+    break;
+
+  case 3: // Solenoid OPEN indefinitely
+    digitalWrite(relay_3, HIGH);
+    break;
+
+  default:
+    Serial.println("Unknown state. Resetting.");
+    resetSystem();
+    break;
+}
 ```
 
 ### Emergency Stop Monitoring
 The emergency stop runs independetly every loop iteration prior to the FSM to ensure the highest priority. It additionally contains a stable-hold condition which allows the system to reboot easily back to setup().
-```cpp title="solenoidControl_V3.ino"
+
+```cpp
   if (digitalRead(emergency_stop) == LOW) {
     lcd.clear();
     lcd.setCursor(0, 0);
@@ -91,7 +93,8 @@ The emergency stop runs independetly every loop iteration prior to the FSM to en
 ```
 
 ### Reset Function
-```cpp title="solenoidControl_V3.ino"
+
+```cpp
 void resetSystem() {
   static bool hasReset = false;
   if (!hasReset) {
