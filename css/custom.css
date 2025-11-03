@@ -1,19 +1,12 @@
-/* Set one baseline on the Markdown content container */
-.post-view .content,
-.page .content {
-  font-size: 1rem;
-  line-height: 1.6;
-}
-
-/* Make paragraphs and lists exactly match the container */
+/* Ensure paragraphs and lists always share the same text size */
 .post-view .content p,
-.page .content p,
 .post-view .content ol,
-.page .content ol,
 .post-view .content ul,
-.page .content ul,
 .post-view .content li,
+.page .content p,
+.page .content ol,
+.page .content ul,
 .page .content li {
-  font-size: 1em;
+  font-size: inherit;
   line-height: inherit;
 }
