@@ -1,12 +1,12 @@
-/* Ensure paragraphs and lists always share the same text size */
-.post-view .content p,
+/* --- Normalize list font size to match paragraph text --- */
+
+/* Lists follow the paragraph font size detected by script.js */
 .post-view .content ol,
 .post-view .content ul,
 .post-view .content li,
-.page .content p,
 .page .content ol,
 .page .content ul,
 .page .content li {
-  font-size: inherit;
-  line-height: inherit;
+  font-size: var(--body-fs, 1em); /* use the JS variable, fallback to 1em */
+  line-height: 1.6;
 }
