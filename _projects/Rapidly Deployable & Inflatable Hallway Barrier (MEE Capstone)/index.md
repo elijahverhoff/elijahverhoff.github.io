@@ -41,62 +41,62 @@ The current state being executed and debug / operational data are output to a 16
 
 ```cpp
 switch (state) {
-case 1: // Solenoid CLOSED until P1 ≥ targetPressure1
-  digitalWrite(relay_3, LOW);
-  if (pressure_1 >= targetPressure1) {
-    Serial.println("Case 1 complete: P1 ≥ target");
-    state = 2;
-    stateStartTime = currentMillis;
-  }
-  break;
+  case 1: // Solenoid CLOSED until P1 ≥ targetPressure1
+    digitalWrite(relay_3, LOW);
+    if (pressure_1 >= targetPressure1) {
+      Serial.println("Case 1 complete: P1 ≥ target");
+      state = 2;
+      stateStartTime = currentMillis;
+    }
+    break;
 
-case 2: // Solenoid OPEN until P2 ≥ targetPressure2
-  digitalWrite(relay_3, HIGH);
-  if (pressure_2 >= targetPressure2) {
-    Serial.println("Case 2 complete: P2 ≥ target");
-    state = 3;
-    stateStartTime = currentMillis;
-  }
-  break;
+  case 2: // Solenoid OPEN until P2 ≥ targetPressure2
+    digitalWrite(relay_3, HIGH);
+    if (pressure_2 >= targetPressure2) {
+      Serial.println("Case 2 complete: P2 ≥ target");
+      state = 3;
+      stateStartTime = currentMillis;
+    }
+    break;
 
-case 3: // Solenoid OPEN until P3 ≥ targetPressure3
-  digitalWrite(relay_3, HIGH); // Keep solenoid open
-  if (pressure_3 >= targetPressure3) {
-    Serial.println("Case 3 complete: P3 ≥ 5 psi");
-    lcd.clear();
-    lcd.setCursor(0, 0);
-    lcd.print("MAINTENANCE");
-    state = 4;
-    stateStartTime = currentMillis;
-  }
-  break;
+  case 3: // Solenoid OPEN until P3 ≥ targetPressure3
+    digitalWrite(relay_3, HIGH); // Keep solenoid open
+    if (pressure_3 >= targetPressure3) {
+      Serial.println("Case 3 complete: P3 ≥ 5 psi");
+      lcd.clear();
+      lcd.setCursor(0, 0);
+      lcd.print("MAINTENANCE");
+      state = 4;
+      stateStartTime = currentMillis;
+    }
+    break;
 
-case 4: // Maintenance
-  digitalWrite(relay_3, HIGH); // Keep solenoid open
+  case 4: // Maintenance
+    digitalWrite(relay_3, HIGH); // Keep solenoid open
 
-  if (pressure_1 < (targetPressure1 - hysteresis)) {
-    Serial.println("P1 dropped: reverting to Case 1");
-    lcd.clear();
-    lcd.setCursor(0, 0);
-    lcd.print("REVERT P1 -> C1");
-    state = 1;
-    stateStartTime = currentMillis;
-  }
-  else if (pressure_2 < (targetPressure2 - hysteresis)) {
-    Serial.println("P2 dropped: reverting to Case 2");
-    lcd.clear();
-    lcd.setCursor(0, 0);
-    lcd.print("REVERT P2 -> C2");
-    state = 2;
-    stateStartTime = currentMillis;
-  }
-  // Note: P3 is used to finish Case 3 only
-  break;
+    if (pressure_1 < (targetPressure1 - hysteresis)) {
+      Serial.println("P1 dropped: reverting to Case 1");
+      lcd.clear();
+      lcd.setCursor(0, 0);
+      lcd.print("REVERT P1 -> C1");
+      state = 1;
+      stateStartTime = currentMillis;
+    }
+    else if (pressure_2 < (targetPressure2 - hysteresis)) {
+      Serial.println("P2 dropped: reverting to Case 2");
+      lcd.clear();
+      lcd.setCursor(0, 0);
+      lcd.print("REVERT P2 -> C2");
+      state = 2;
+      stateStartTime = currentMillis;
+    }
+    // Note: P3 is used to finish Case 3 only
+    break;
 
-default:
-  Serial.println("Unknown state. Resetting.");
-  resetSystem();
-  break;
+  default:
+    Serial.println("Unknown state. Resetting.");
+    resetSystem();
+    break;
 }
 ```
 
