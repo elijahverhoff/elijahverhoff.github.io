@@ -193,6 +193,6 @@ Led systems-level research synthesis to unify team literature reviews into a sin
 
 Scheduled and coordinated meetings with our client from Sandia National Laboratories to solidly define project objectives, constraints, and goals. Ensured consistent updates of the project's progress and timeline were passed along to the client. Kept updated Gantt charts and manufacturing timelines to maintain equal expectations between the team and our client.
 
-### Manufacturing Timeline
+### Flowchart
 
 {% include image-gallery.html images="manufacturingFlowchart.png" height="400" %}
