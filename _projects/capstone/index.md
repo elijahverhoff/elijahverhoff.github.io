@@ -155,7 +155,7 @@ void resetSystem() {
 
 ### Circuit Diagram
 
-{% include image-gallery.html images="circuitDiagram.webp" width="100%" %}
+{% include image-gallery.html images="circuitDiagram.webp" height="400" %}
 
 
 
@@ -171,15 +171,15 @@ Led systems-level research synthesis to unify team literature reviews into a sin
 
 ### Analysis of Loading Conditions
 
-{% include image-gallery.html images="case1.png" width="100%" %} <br>
+{% include image-gallery.html images="case1.png" height="760"%} <br>
 
-{% include image-gallery.html images="case3.png" width="100%" %} <br>
+{% include image-gallery.html images="case3.png" height="540"%} <br>
 
 
 
 ### Modeling Material Performance
 
-{% include image-gallery.html images="plot1.png" width="100%" %}
+{% include image-gallery.html images="plot1.png" height="760" %}
 
 
 
@@ -193,6 +193,6 @@ Scheduled and coordinated meetings with our client from Sandia National Laborato
 
 ### Progress Documentation
 
-{% include image-gallery.html images="manufacturingFlowchart.png" width="100%" %} <br>
+{% include image-gallery.html images="manufacturingFlowchart.png" height="400" %} <br>
 
-{% include image-gallery.html images="gantt.png" width="100%" %}
+{% include image-gallery.html images="gantt.png" height="720" %}
