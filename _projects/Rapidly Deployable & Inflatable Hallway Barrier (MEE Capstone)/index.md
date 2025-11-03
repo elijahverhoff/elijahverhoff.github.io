@@ -27,7 +27,7 @@ An imperitive attribute of the barrier is that it must be deployable by a single
 
 Debug and operational data is output to an 16x2 LCD, as well as the current state being executed. Emergency stop and reset functions were added primarily for prototyping. Basic error handling is present to handle negative pressure readings, unexpected states, and timeouts.
 
-### FSM
+### Finite State Model
 
 ```cpp
 switch (state) {
