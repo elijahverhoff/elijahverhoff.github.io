@@ -72,10 +72,10 @@ p {
   margin-bottom: 1em;
   padding: 0;
 }
-/* Match list text size to paragraph text */
+/* Make list text match paragraphs exactly */
 ul, ol, li {
-  font-size: calc(9px + 0.5vw);
-  line-height: 1.6;
+  font-size: var(--base-font-size);
+  line-height: var(--base-line-height);
 }
 
   
