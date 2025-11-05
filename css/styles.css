@@ -62,45 +62,30 @@ span {
     color: var(--text-color);
   }
 
-/* --- Code typography --- */
-:root {
-  /* desktop-ish default; tweak to taste */
-  --code-scale: 0.92;
+/* Make paragraphs and lists inherit the base size */
+p, ul, ol, li {
+  font-size: inherit;
+  line-height: inherit;
 }
-
-/* Make code track body size everywhere */
-pre, code, kbd, samp,
-.highlight pre, .highlighter-rouge pre, figure.highlight pre,
-.highlight code, .highlighter-rouge code {
-  font-size: calc(var(--base-font-size) * var(--code-scale));
-  line-height: 1.45;
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+p {
+  color: var(--text-color);
+  margin-bottom: 1em;
+  padding: 0;
 }
-
-/* Inline code a touch smaller than surrounding text */
-p code, li code {
-  font-size: 0.95em;
+/* Make list text match paragraphs exactly */
+ul, ol, li {
+  font-size: var(--base-font-size);
+  line-height: var(--base-line-height);
 }
+/* Headings scale with body because em is relative to the parent (body) */
+h1 { font-size: 2.2em; }
+h2 { font-size: 1.8em; }
+h3 { font-size: 1.5em; }
+h4 { font-size: 1.25em; }
+h5 { font-size: 1.12em; }
+h6 { font-size: 1.06em; }
 
-/* Block code layout */
-pre {
-  overflow-x: auto;
-  white-space: pre;          /* keep formatting; horizontal scroll if needed */
-  -webkit-overflow-scrolling: touch;
-  margin: 0.9em 0;
-  padding: 0.8em 1em;
-  border-radius: 8px;
-}
 
-/* Mobile: gently shrink code more than body */
-@media (max-width: 640px) {
-  :root { --code-scale: 0.82; }   /* try 0.78–0.86 if you want it smaller/bigger */
-}
-
-/* If any theme rule is still winning due to specificity,
-   add this as a last resort (uncomment if needed):
-pre, code { font-size: calc(var(--base-font-size) * var(--code-scale)) !important; }
-*/
 
 
 
@@ -991,4 +976,3 @@ footer p {
 
       
 }
-
