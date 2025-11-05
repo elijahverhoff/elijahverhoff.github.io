@@ -72,6 +72,11 @@ p {
   margin-bottom: 1em;
   padding: 0;
 }
+/* Match list text size to paragraph text */
+ul, ol, li {
+  font-size: calc(9px + 0.5vw);
+  line-height: 1.6;
+}
 
   
 
