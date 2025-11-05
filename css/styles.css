@@ -77,47 +77,14 @@ ul, ol, li {
   font-size: var(--base-font-size);
   line-height: var(--base-line-height);
 }
-/* Fluid, consistent heading scale based on the same base as body */
-:root {
-  /* adjust the ratio to taste: 1.20 = major third, 1.25 = perfect fourth */
-  --type-ratio: 1.25;
-}
+/* Headings scale with body because em is relative to the parent (body) */
+h1 { font-size: 2.2em; }
+h2 { font-size: 1.8em; }
+h3 { font-size: 1.5em; }
+h4 { font-size: 1.25em; }
+h5 { font-size: 1.12em; }
+h6 { font-size: 1.06em; }
 
-h1, h2{
-  line-height: 1.2;
-  margin: 0.6em 0 0.4em;
-  font-weight: 500; /* or your preferred weight */
-}
-h3, h4, h5, h6 {
-  line-height: 1.2;
-  margin: 0.6em 0 0.4em;
-  font-weight: normal; /* or your preferred weight */
-}
-
-/* Guaranteed larger than body at all viewport widths */
-h6 { font-size: clamp(calc(var(--base-font-size) * 1.05),
-                      calc(var(--base-font-size) * 1.02 + 0.2vw),
-                      calc(var(--base-font-size) * 1.15)); }
-
-h5 { font-size: clamp(calc(var(--base-font-size) * 1.20),
-                      calc(var(--base-font-size) * 1.10 + 0.3vw),
-                      calc(var(--base-font-size) * 1.35)); }
-
-h4 { font-size: clamp(calc(var(--base-font-size) * 1.44),
-                      calc(var(--base-font-size) * 1.20 + 0.4vw),
-                      calc(var(--base-font-size) * 1.62)); }
-
-h3 { font-size: clamp(calc(var(--base-font-size) * 1.80),
-                      calc(var(--base-font-size) * 1.35 + 0.6vw),
-                      calc(var(--base-font-size) * 1.95)); }
-
-h2 { font-size: clamp(calc(var(--base-font-size) * 2.10),
-                      calc(var(--base-font-size) * 1.60 + 0.9vw),
-                      calc(var(--base-font-size) * 2.30)); }
-
-h1 { font-size: clamp(calc(var(--base-font-size) * 2.40),
-                      calc(var(--base-font-size) * 1.80 + 1.2vw),
-                      calc(var(--base-font-size) * 2.80)); }
 
   
 
