@@ -154,7 +154,7 @@ pre {
 /* Make code text smaller on mobile */
 @media (max-width: 640px) {
   :root {
-    --code-scale: 0.75; /* was ~0.92–0.82 before; lower this to shrink code */
+    --code-scale: 0.55; /* was ~0.92–0.82 before; lower this to shrink code */
   }
 
   pre, code, kbd, samp,
