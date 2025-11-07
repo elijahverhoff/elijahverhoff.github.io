@@ -136,6 +136,8 @@ Just like XML, MusicXML stores information within element blocks. Locating the i
 
 A CSV for each part is generated for notes and their durations.
 
+### Data Extraction
+
 ```python
 
 import csv, os
@@ -206,6 +208,4 @@ for part in parts:
         csv.writer(f).writerows(durations)
 ```
 
-
-
-
+After these CSVs are generated they are further processed to interleave each data type, and are then placed into an Arduino header file.
