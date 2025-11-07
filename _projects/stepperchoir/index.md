@@ -135,6 +135,10 @@ void handleNoteChange(byte motorNum, byte stepPin, int& motorVar) {
 
 
 
+---
+
+
+
 ## Python MusicXML Parser
 
 Just like XML, MusicXML stores information within element blocks. Locating the information necessary for this project requires the parser to iterate over each <part> to produce per-part CSVs. For each part, it collects three parallel sequences: notes, durations, and tempos. The parsing occurs in the following order:
