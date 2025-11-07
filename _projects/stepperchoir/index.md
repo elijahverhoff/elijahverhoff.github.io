@@ -19,6 +19,10 @@ The purpose of this project was to gain a deeper understanding of PLC programmin
 
 
 
+---
+
+
+
 ### Highlights
  - Hardware: motor drivers, power, and wiring considerations
  - Firmware: non-blocking step scheduling, tempo tracking
@@ -44,6 +48,10 @@ Four A4988 motor driver chips were used with an Arduino CNC Shield to interface 
   Edit this project interactively in
   <a href="https://app.cirkitdesigner.com/project/63fb81e0-d7ee-4076-a3c7-8c742165dabe" target="_blank" rel="noopener">Cirkit Designer</a>.
 </p>
+
+
+
+---
 
 
 
