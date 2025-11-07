@@ -129,4 +129,83 @@ void handleNoteChange(byte motorNum, byte stepPin, int& motorVar) {
 
 ### Python MusicXML Parser
 
-dadada
+Just like XML, MusicXML stores information within element blocks. Locating the information necessary for this project requires the parser to iterate over each <part> to produce per-part CSVs. For each part, it collects three parallel sequences: notes, durations, and tempos. The parsing occurs in the following order:
+1. For each part, gather key signature information for each measure. This is used to denote which notes are sharp or flat.
+2. In each measure, gather all pitches, durations, and any supplimentary accidentals. If there is a rest, append the pitch array with a 0.
+3. Apply key signature details to gathered notes. For example, in the key of F major each 'B' note should be flat, unless otherwise specified by a "natural" symbol.
+
+A CSV for each part is generated for notes and their durations.
+
+```Python
+
+import csv, os
+from lxml import etree
+
+# --- Parse and prepare output folder ---
+tree = etree.parse(r"C:\Users\lija1\Downloads\Hide_And_Seek_SATB_A_Cappella.xml")
+parts = tree.findall('.//part')
+folder_name = os.path.splitext(os.path.basename(tree.docinfo.URL))[0]
+os.makedirs(folder_name, exist_ok=True)
+
+for part in parts:
+    part_id = part.get('id')
+    notes, durations, tempos = [], [], []
+
+    # Iterate measures to gather key signature and note data
+    for measure in part.findall('.//measure'):
+        # Key signature (sharps/flats)
+        fifths = None; fourths = None
+        attrs = measure.find('.//attributes')
+        if attrs is not None:
+            k = attrs.find('.//key')
+            if k is not None:
+                f = k.find('.//fifths')
+                if f is not None:
+                    val = int(f.text)
+                    if val >= 0: fifths = val
+                    else: fourths = abs(val)
+
+        # Visit all notes in the measure
+        accidental_check = None
+        note_elems = measure.findall('.//note')
+        for n in note_elems:
+            rest = n.find('.//rest')
+            dur = n.find('.//duration')
+            pitch = n.find('.//pitch')
+            acc  = n.find('.//accidental')
+
+            if rest is not None:
+                notes.append(['0'])                          # rest
+            else:
+                step = pitch.find('.//step').text
+                octave = pitch.find('.//octave').text
+                # apply explicit accidental if present
+                if acc is not None:
+                    token = f"{step}{acc.text}{octave}"
+                    accidental_check = step
+                    accidental_previous = acc.text
+                    octave_previous = octave
+                else:
+                    # apply key signature (flats or sharps) unless overridden by carried accidental
+                    if fourths is not None and step in ["B","E","A","D","G","C","F"][:fourths]:
+                        token = f"{step}flat{octave}"
+                    elif fifths is not None and step in ["F","C","G","D","A","E","B"][:fifths]:
+                        token = f"{step}sharp{octave}"
+                    elif accidental_check == step and octave == octave_previous:
+                        token = f"{step}{accidental_previous}{octave}"
+                    else:
+                        token = f"{step}{octave}"
+                notes.append([token])
+
+            durations.append([dur.text])                     # raw MusicXML duration
+
+    # --- Write CSVs for this part ---
+    with open(os.path.join(folder_name, f'notes_{part_id}.csv'), 'w', newline='') as f:
+        csv.writer(f).writerows(notes)
+    with open(os.path.join(folder_name, f'durations_{part_id}.csv'), 'w', newline='') as f:
+        csv.writer(f).writerows(durations)
+```
+
+
+
+
