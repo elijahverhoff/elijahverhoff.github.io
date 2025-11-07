@@ -19,14 +19,14 @@ The purpose of this project was to gain a deeper understanding of PLC programmin
 
 
 
----
-
-
-
 ### Highlights
  - Hardware: motor drivers, power, and wiring considerations
  - Firmware: non-blocking step scheduling, tempo tracking
  - Parser: MusicXML - interleaved note/duration/tempo CSVs
+
+
+
+---
 
 
 
