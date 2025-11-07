@@ -13,7 +13,7 @@ main-image: /headerComp.webp
 ---
 
 
-## Overview
+## Goals
 
 The purpose of this project was to gain a deeper understanding of PLC programming. Many guides are available online which outline how to interface stepper motors with an Arduino for this purpose, using MIDI as an input to easily track all note data. To craft my own previously undocumented solution, I decided to use raw note data as the program's input.
 
