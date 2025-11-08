@@ -44,6 +44,8 @@ Once the region of interest is isolated, I contrast the region to visually separ
 
 The now-clearly identified areas can be exported as a 3D model. Having a geometric surface model made it possible to analyze the subject's anatomy to design a form-fitting implant.
 
+
+
 ## Design
 
 This phase transformed raw anatomical geometry into a refined, parametric model ready for prototyping. Through mesh repair, surface reconstruction, and curvature analysis, the model was engineered for both biological fit and manufacturability.
@@ -70,7 +72,7 @@ Surface geometries were projected in 2D from the top of the teeth and the bottom
 
 The finished implant and denture models were imported into Chitubox slicer to prepare for SLA resin printing. Print orientation was set to 45 degrees with a layer height equal to the native resolution of the printer to avoid layer shifting, and to ensure a clean surface finish on mating parts.
 
-{% include image-gallery.html images="slicer.png" %} <br>
+{% include image-gallery.html images="slicing.png" %} <br>
 
 After printing the supports were carefully removed, the components were rinsed with 99% isopropyl alcohol, and then UV-cured.
 
