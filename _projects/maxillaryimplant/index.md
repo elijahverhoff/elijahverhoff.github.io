@@ -26,6 +26,10 @@ The purpose of this project was to gain a deeper understanding of how to reverse
 
 
 
+---
+
+
+
 ## Digitization
 
 This process begins with DICOM files, which contain cross sectional images taken by an MRI machine. To view these files, and to isolate the teeth and jaw bones, medical image visualization and segmentation software is needed. ITK-SNAP was chosen as it is open-source and free to use.
@@ -43,6 +47,10 @@ Once the region of interest is isolated, I contrast the region to visually separ
 {% include image-gallery.html images="thresholding.png" %} <br>
 
 The now-clearly identified areas can be exported as a 3D model. Having a geometric surface model made it possible to analyze the subject's anatomy to design a form-fitting implant.
+
+
+
+---
 
 
 
@@ -67,6 +75,12 @@ The "repair mesh" tool was then used to verify a cohesive, closed surface.
 Surface geometries were projected in 2D from the top of the teeth and the bottom of the maxilla. This is a simple solution to create an anatomically informed, lofted implant. A second lateral 2D projection of the teeth and maxilla yielded a path by which the implant was swept. This created an implant which is contoured directly to the subject's existing bone structure in all dimensions. The accompanying denture was designed using the subject's teeth present in the mesh, requiring no special modeling beyond a keyway to insert into the implant.
 
 {% include image-gallery.html images="implant.png" %} <br>
+
+
+
+---
+
+
 
 ## Fabrication
 
