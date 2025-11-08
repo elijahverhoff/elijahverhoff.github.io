@@ -10,5 +10,5 @@ skills:
 - ITK-SNAP
 - Rhinoceros CAD
 - Medical Image Segmentation
-main-image: /headerComp.webp
+main-image: /headerComp2.webp
 ---
