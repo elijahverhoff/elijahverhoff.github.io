@@ -65,3 +65,15 @@ The "repair mesh" tool was then used to verify a cohesive, closed surface.
 Surface geometries were projected in 2D from the top of the teeth and the bottom of the maxilla. This is a simple solution to create an anatomically informed, lofted implant. A second lateral 2D projection of the teeth and maxilla yielded a path by which the implant was swept. This created an implant which is contoured directly to the subject's existing bone structure in all dimensions. The accompanying denture was designed using the subject's teeth present in the mesh, requiring no special modeling beyond a keyway to insert into the implant.
 
 {% include image-gallery.html images="implant.png" %} <br>
+
+## Fabrication
+
+The finished implant and denture models were imported into Chitubox slicer to prepare for SLA resin printing. Print orientation was set to 45 degrees with a layer height equal to the native resolution of the printer to avoid layer shifting, and to ensure a clean surface finish on mating parts.
+
+{% include image-gallery.html images="slicer.png" %} <br>
+
+After printing the supports were carefully removed, the components were rinsed with 99% isopropyl alcohol, and then UV-cured.
+
+{% include image-gallery.html images="print1.png" %} <br>
+
+{% include image-gallery.html images="print2.png" %} <br>
