@@ -36,17 +36,32 @@ My goal is to convert the MRI data into a usable 3D model of the subject's maxil
 
 {% include image-gallery.html images="segmentation.png" %} <br>
 
-One the region of interest is isolated, I contrast the region to visually separate hard bone tissue from softer tissues like skin and fat. With the teeth and maxilla are clearly differentiated from surrounding tissue, I used ITK-SNAP's thresholding feature to place region-growing nodes throughout the teeth and maxilla. 
+Once the region of interest is isolated, I contrast the region to visually separate hard bone tissue from softer tissues like skin and fat. With the teeth and maxilla are clearly differentiated from surrounding tissue, I used ITK-SNAP's thresholding feature to place region-growing nodes throughout the teeth and maxilla. 
 
 {% include image-gallery.html images="isolation.png" %} <br>
 
 {% include image-gallery.html images="thresholding.png" %} <br>
 
-Once the software finished finding the edges of these regions, the clearly identified areas can be exported as a 3D model. Having a geometric surface model made it possible to analyze the subject's anatomy to design a form-fitting implant.
+The now-clearly identified areas can be exported as a 3D model. Having a geometric surface model made it possible to analyze the subject's anatomy to design a form-fitting implant.
 
-### Mesh Preparation
+## Design
 
+This phase transformed raw anatomical geometry into a refined, parametric model ready for prototyping. Through mesh repair, surface reconstruction, and curvature analysis, the model was engineered for both biological fit and manufacturability.
 
+### Mesh Optimization
+
+The exported STL model contains extraneous points, holes, and uneven tessellation that needs to be removed to ensure topological consistency.
 
 {% include image-gallery.html images="rawMesh.png" %} <br>
 
+Rhinoceros 3D was used to verify the mesh integrity for further design. All extraneous points were manually removed and mesh holes were manually patched. With no irrelevant geometry remaining, the "shrink wrap" tool was used for surface smoothing.
+
+{% include image-gallery.html images="cleanMesh.png" %} <br>
+
+The "repair mesh" tool was then used to verify a cohesive, closed surface.
+
+### Implant Creation
+
+Surface geometries were projected in 2D from the top of the teeth and the bottom of the maxilla. This is a simple solution to create an anatomically informed, lofted implant. A second lateral 2D projection of the teeth and maxilla yielded a path by which the implant was swept. This created an implant which is contoured directly to the subject's existing bone structure in all dimensions. The accompanying denture was designed using the subject's teeth present in the mesh, requiring no special modeling beyond a keyway to insert into the implant.
+
+{% include image-gallery.html images="implant.png" %} <br>
