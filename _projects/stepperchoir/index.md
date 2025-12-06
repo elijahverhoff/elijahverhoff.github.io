@@ -9,7 +9,7 @@ skills:
 - Circuit Design
 - PLC Programming
 - Stepper Motors
-main-image: /headerComp.webp
+main-image: /headerComp_PLACEHOLDER.webp
 ---
 
 
@@ -23,6 +23,27 @@ The purpose of this project was to gain a deeper understanding of PLC programmin
  - Hardware: motor drivers, power, and wiring considerations
  - Firmware: non-blocking step scheduling, tempo tracking
  - Parser: MusicXML - interleaved note/duration/tempo CSVs
+
+
+
+---
+
+
+
+## Demo
+
+This section is currently blank as my only Arduino has been damaged while moving between apartments. I intend to include a demo of this project and update its media by late December, 2025.
+
+<!-- choir demo video -->
+<div style="margin: 2rem 0;">
+  <video
+    controls
+    style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 0 12px rgba(0,0,0,0.3);"
+  >
+    <source src="{{ site.baseurl }}/_projects/stepperchoir/hallelujah_chorus.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
 
 
 
