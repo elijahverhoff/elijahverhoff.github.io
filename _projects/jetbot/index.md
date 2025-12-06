@@ -3,7 +3,7 @@ layout: post
 title: Jetbot Control with AR Tags and 3D Pose Estimation
 description:  Used a Jetbot running ROS 2 on a Jetson Nano to calibrate a CSI camera, detect ARUCO markers, estimate their 3D pose, and drive the robot relative to the tag.
 skills: 
-- ROS 2 (Humble)
+- ROS 2
 - Jetbot / Jetson Nano
 - Dockerized Robotics Development
 - GStreamer / gscam
@@ -20,9 +20,7 @@ main-image: /headerComp.webp
 
 ## Goals
 
-This project explores a full perception-to-control loop on a Jetbot: use the onboard CSI camera to detect AR tags, estimate their 3D pose, and then command the robot so it automatically turns and drives toward the marker. The focus was less on low-level driver work and more on integrating camera streaming, calibration, pose estimation, and closed-loop control into a single repeatable workflow.
-
-
+This project employs perception and control logic a Jetbot. It showcases use of Jetbot's onboard CSI camera to detect AR tags, estimate their 3D pose, and then command the robot so it automatically turns and drives toward the marker. The focus was on integrating camera streaming, calibration, pose estimation, and closed-loop control into a single repeatable workflow.
 
 ### Highlights
 
@@ -46,7 +44,7 @@ The main data flow is:
 - A marker detector subscribes to the camera topic and publishes ARUCO detections with full 3D pose information.  
 - A custom control node subscribes to these detections and publishes velocity commands to the Jetbot’s motor driver.
 
-A laptop on the same network is used for development, visualization, and monitoring with RViz2 and other ROS tools.
+A laptop on the same network is used for development and visualization/monitoring with RViz2 and other ROS tools.
 
 ### Simplified launch code
 
@@ -81,9 +79,7 @@ A laptop on the same network is used for development, visualization, and monitor
 
 ## Perception
 
-The camera is a MIPI-CSI module connected directly to the Jetson Nano. A GStreamer pipeline streams frames from the camera into ROS 2 as raw images. Once this is running, the robot continuously publishes an image topic that can be visualized remotely.
-
-To make pose estimation reliable, the camera is calibrated at 640×360 resolution. A calibration file containing the intrinsic matrix, distortion coefficients, and projection parameters is loaded at startup. This allows the system to remove lens distortion and convert pixel measurements into consistent metric poses.
+The camera is a MIPI-CSI module connected directly to the Jetson Nano. A GStreamer pipeline streams frames from the camera into ROS 2 as raw images. Once this is running, the robot continuously publishes an image topic that can be monitored remotely.
 
 ### Starting camera node
 
@@ -97,6 +93,8 @@ ros2 run gscam gscam_node --ros-args \
   -p frame_id:=v4l_frame
 
 ```
+
+To make pose estimation reliable, the camera is calibrated at 640×360 resolution. A calibration file containing the intrinsic matrix, distortion coefficients, and projection parameters is loaded at startup. This allows the system to remove lens distortion and convert pixel measurements into consistent poses.
 
 AR tags from a 4×4 dictionary are printed at a known physical size. The detector node listens to the camera topic, identifies markers in each frame, and publishes a list of detections. Each detection includes the marker ID and its position and orientation relative to the camera frame, giving the controller a full 6-DoF pose to work with.
 
@@ -127,7 +125,7 @@ For each incoming detection, the controller:
 - Computes an angular correction to rotate the robot until the tag is centered in the image.  
 - Computes a linear velocity to move forward until the robot reaches a comfortable stand-off distance from the marker.
 
-When a marker is visible, the Jetbot turns to face it and drives toward it in a smooth motion. As the distance shrinks, the commanded linear velocity is reduced so the robot slows down instead of overshooting. If no detections are available, the controller can fall back to stopping in place or slowly searching by rotating.
+When a marker is visible, the Jetbot turns to face it and drives toward it in a smooth motion. As the distance shrinks, the commanded velocity is reduced so the robot slows down instead of overshooting. If no detections are available, the controller can fall back to stopping in place or slowly searching by rotating.
 
 ### Core control logic
 
@@ -185,7 +183,7 @@ With the full launch configuration running on the Jetbot, the system brings up t
 - The marker pose relative to the camera frame.  
 - The velocity commands being published to the robot.
 
-In practice, the Jetbot successfully orients itself toward a printed AR tag and drives forward until it reaches the target distance. The project demonstrates an end-to-end perception and control pipeline on an embedded platform, and serves as a foundation for more advanced behaviors such as multi-marker navigation or integration with additional localization sources.
+In practice, the Jetbot successfully orients itself toward a printed AR tag and drives forward until it reaches the target distance. The project demonstrates a full-cycle perception and control pipeline on an embedded platform, and serves as a foundation for learning more advanced behaviors such as multi-marker navigation or integration with additional localization sources.
 
 ### Demo
 
