@@ -79,6 +79,8 @@ skills:
     tools:
     - Python
     - C++
+    - Bash/Shell Scripting
+    - JavaScript
     - Structured Text (ST)
     - Ladder Diagram (LD)
   - category: Robotics / Control Frameworks
