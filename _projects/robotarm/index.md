@@ -47,19 +47,39 @@ It was exceptionally tricky to find easy-to-follow literature on design theory s
 
 The solution: designing a parallelogram 4-bar linkage system to transmit force from a motor mounted on the arm base to the forearm. While this still introduces a closed-loop linkage system to the robot arm, it helped satisfy the goal of delivering a payload at the previously stated parameters. With a parallelogram 4-bar linkage system controlling the pitch of the elbow, our driving arm mounted at the arm base rotates at a 1:1 ratio collinearly with the forearm – this allows a simplified model to be simulated in RViz/MoveIt, and with a custom IK/FK solver, will still be able to simulate accurate motion planning. EEZYBotARM is a 3D printable, open-source, 3DOF robot arm that uses this mechanism. My design is heavily influenced by this existing model to avoid printing issues and to not “reinvent the wheel.”
 
-  <!-- SOLIDWORKS assem -->
+<!-- SOLIDWORKS assem -->
 {% include image-gallery.html images="CADAssem_Iso.png" %} <br>
 
-  <!-- SOLIDWORKS model base -->
+<!-- SOLIDWORKS model base -->
 {% include image-gallery.html images="CADAssem_base.png" %} <br>
 
-  <!-- SOLIDWORKS model end effector -->
+<!-- SOLIDWORKS model end effector -->
 {% include image-gallery.html images="CADAssem_ee.png" %} <br>
 
-  <!-- SOLIDWORKS motion video -->
-  <div style="display: flex; justify-content: center; margin: 2rem 0;">
+<!-- SOLIDWORKS motion video -->
+<div style="display: flex; justify-content: center; margin: 2rem 0;">
   <video 
     src="./sw_sim.mp4"
+    controls
+    style="max-width: 800px; width: 100%; border-radius: 8px; box-shadow: 0 0 12px rgba(0,0,0,0.3);"
+  >
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+## Simulation
+
+SOLIDWORKS was used to calculate origin-to-origin distances in X, Y, and Z for each link to set-up the robot description in URDF. A simple robot description, omitting closed-loops, was generated with the fixed base, the rotating base, the upper arm, the forearm, and the end effector subassembly.The URDF robot description can be found [here.](https://drive.google.com/file/d/17NUcIzNML3wLjn3Vf0oRQ9cXDPPyMkwc/view?usp=drive_link)
+
+The custom IK/FK solver is necessary to motion plan accurately with MoveIt because the elbow is actuated by a parallelogram 4-bar linkage mechanism – All other linkages can be set as motion constraints on the joints in MoveIt. These equations have been neatly compiled into a LaTeX document found [here.](https://drive.google.com/file/d/1LzR1SnR1SEesYTvwaYrWoqJifeOqBn_p/view?usp=drive_link)
+
+<!-- MoveIt model -->
+{% include image-gallery.html images="moveit_model.png" %} <br>
+
+<!-- MoveIt motion planning demo -->
+<div style="display: flex; justify-content: center; margin: 2rem 0;">
+  <video 
+    src="./moveit_motionplanning.mp4"
     controls
     style="max-width: 800px; width: 100%; border-radius: 8px; box-shadow: 0 0 12px rgba(0,0,0,0.3);"
   >
