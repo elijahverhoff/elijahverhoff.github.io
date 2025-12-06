@@ -38,14 +38,14 @@ The aim of this project is to learn how to interface with robotic control system
 
 ## Design
 
-It was exceptionally tricky to find easy-to-follow literature on design theory surrounding this type of robot. Many 3-DOF robots that serve as open-source learning projects are SCARA robots: which by all accounts are known to be a good “beginner” robot to design. While the original project outline doesn’t explicitly state the robot arm should be a 3R-DOF robot, I decided that a SCARA robot was not my original design intention, and that I would commit myself to designing a 3R-DOF robot arm instead. This decision came with a few unexpected roadblocks:
+It was exceptionally tricky to find easy-to-follow literature on design theory surrounding this type of robot. Many 3-DOF robots that serve as open-source learning projects are SCARA robots: which by all accounts are known to be a good “beginner” robot to design. While the original project intent wasn’t explicitly that the robot arm should be a 3R-DOF robot, I decided that a SCARA robot was not my original design intention, and that I would commit myself to creating a 3R-DOF robot arm instead. This decision came with a few unexpected roadblocks:
 
 * A 3-DOF robot arm with 3 revolute joints controlling the yaw of the base, the pitch of the shoulder, and the pitch of the elbow experiences a large amount of torque at the shoulder.
 * 3D printing rigid links that deflect a negligible amount is challenging given the project parameters (capable of lifting 1 lb at a distance of 1 ft).
 * The elbow of the robot cannot be actuated by a (cheaply available) servo motor also mounted at the elbow, as the weight of the servo would greatly increase the force experienced by the shoulder.
 * Any closed-loop design solutions (e.g., a four-bar mechanism) to transmit loading conditions will greatly complicate the motion planning in MoveIt. Furthermore, URDF doesn’t support closed-loop robot descriptions.
 
-The solution: designing a parallelogram 4-bar linkage system to transmit force from a motor mounted on the arm base to the forearm. While this still introduces a closed-loop linkage system to the robot arm, it helped satisfy the goal of delivering a payload at the previously stated parameters. With a parallelogram 4-bar linkage system controlling the pitch of the elbow, our driving arm mounted at the arm base rotates at a 1:1 ratio collinearly with the forearm – this allows a simplified model to be simulated in RViz/MoveIt, and with a custom IK/FK solver, will still be able to simulate accurate motion planning. EEZYBotARM is a 3D printable, open-source, 3DOF robot arm that uses this mechanism. My design is heavily influenced by this existing model to avoid printing issues and to not “reinvent the wheel.”
+**The solution:** designing a parallelogram 4-bar linkage system to transmit force from a motor mounted on the arm base to the forearm. While this still introduces a closed-loop linkage system to the robot arm, it helped satisfy the goal of delivering a payload at the previously stated parameters. With a parallelogram 4-bar linkage system controlling the pitch of the elbow, our driving arm mounted at the arm base rotates at a 1:1 ratio collinearly with the forearm – this allows a simplified model to be simulated in RViz/MoveIt, and with a custom IK/FK solver, will still be able to simulate accurate motion planning. EEZYBotARM is a 3D printable, open-source, 3DOF robot arm that uses this mechanism. My design is heavily influenced by this existing model to avoid printing issues and to not “reinvent the wheel.”
 
 ### SOLIDWORKS Model
 
@@ -94,7 +94,6 @@ The custom IK/FK solver is necessary to motion plan accurately with MoveIt becau
     Your browser does not support the video tag.
   </video>
 </div>
-
 
 ## Fabrication and Assembly
 
