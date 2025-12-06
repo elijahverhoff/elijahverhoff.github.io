@@ -61,10 +61,10 @@ The solution: designing a parallelogram 4-bar linkage system to transmit force f
 ### SOLIDWORKS Motion
 
 <!-- SOLIDWORKS motion video -->
-<div style="display: flex; justify-content: center; margin: 2rem 0;">
+<div style="margin: 2rem 0;">
   <video
     controls
-    style="max-width: 800px; width: 100%; border-radius: 8px; box-shadow: 0 0 12px rgba(0,0,0,0.3);"
+    style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 0 12px rgba(0,0,0,0.3);"
   >
     <source src="{{ site.baseurl }}/_projects/robotarm/sw_sim.mp4" type="video/mp4">
     Your browser does not support the video tag.
@@ -85,15 +85,16 @@ The custom IK/FK solver is necessary to motion plan accurately with MoveIt becau
 ### MoveIt Motion Planning
 
 <!-- MoveIt motion planning demo -->
-<div style="display: flex; justify-content: center; margin: 2rem 0;">
+<div style="margin: 2rem 0;">
   <video
     controls
-    style="max-width: 800px; width: 100%; border-radius: 8px; box-shadow: 0 0 12px rgba(0,0,0,0.3);"
+    style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 0 12px rgba(0,0,0,0.3);"
   >
     <source src="{{ site.baseurl }}/_projects/robotarm/moveit_motionplanning.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 </div>
+
 
 ## Fabrication and Assembly
 
