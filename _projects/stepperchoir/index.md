@@ -95,7 +95,7 @@ void loop() {
 
 ### Step Pulse Generation
 
-This function handles the pitch timing. With a resolution of microseconds, this function ensures that the motor plays a pitch by delivering step pulses to the motor at the frequency of the note to be played. For example, to produce A4 (~440 Hz), the period would be approximately 1,000,000 µs / 440 ≈ 2273 µs.
+This function handles the pitch timing. It ensures that the motor plays a pitch by delivering step pulses to the motor at a rate equal to the period of the note to be played. For example, to produce A4 (~440 Hz), the period would be approximately 1,000,000 µs / 440 ≈ 2273 µs. In this case, a "single step" pulse is sent every 2273 µs.
 
 motorSpeeds[motorNum] defines the time between steps in microseconds (the inverse of frequency). A smaller value results in a higher pitch.
 
