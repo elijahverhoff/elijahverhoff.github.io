@@ -59,7 +59,7 @@ The solution: designing a parallelogram 4-bar linkage system to transmit force f
   <!-- SOLIDWORKS motion video -->
   <div style="display: flex; justify-content: center; margin: 2rem 0;">
   <video 
-    src="./motion.mp4"
+    src="./sw_sim.mp4"
     controls
     style="max-width: 800px; width: 100%; border-radius: 8px; box-shadow: 0 0 12px rgba(0,0,0,0.3);"
   >
