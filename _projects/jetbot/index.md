@@ -197,14 +197,3 @@ In practice, the Jetbot successfully orients itself toward a printed AR tag and 
     Your browser does not support the video tag.
   </video>
 </div>
-
-<!-- Jetbot navigation demo video -->
-<div style="margin: 2rem 0;">
-  <video
-    controls
-    style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 0 12px rgba(0,0,0,0.3);"
-  >
-    <source src="{{ site.baseurl }}/_projects/jetbot/visualTracking_demo_wide.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-</div>

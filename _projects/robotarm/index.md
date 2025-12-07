@@ -75,7 +75,7 @@ It was exceptionally tricky to find easy-to-follow literature on design theory s
 
 SOLIDWORKS was used to calculate origin-to-origin distances in X, Y, and Z for each link to set-up the robot description in URDF. A simple robot description, omitting closed-loops, was generated with the fixed base, the rotating base, the upper arm, the forearm, and the end effector subassembly.The URDF robot description can be found [here.](https://drive.google.com/file/d/17NUcIzNML3wLjn3Vf0oRQ9cXDPPyMkwc/view?usp=drive_link)
 
-The custom IK/FK solver is necessary to motion plan accurately with MoveIt because the elbow is actuated by a parallelogram 4-bar linkage mechanism – All other linkages can be set as motion constraints on the joints in MoveIt. These equations have been neatly compiled into a LaTeX document found [here.](https://drive.google.com/file/d/1LzR1SnR1SEesYTvwaYrWoqJifeOqBn_p/view?usp=drive_link)
+The custom IK/FK solver ([found here](https://drive.google.com/file/d/1k5C2NXod-VKMPrG2GX9reXB2zIz_uDvo/view?usp=drive_link)) is necessary to motion plan accurately with MoveIt because the elbow is actuated by a parallelogram 4-bar linkage mechanism – All other linkages can be set as motion constraints on the joints in MoveIt. These equations have been neatly compiled into a LaTeX document found [here.](https://drive.google.com/file/d/1LzR1SnR1SEesYTvwaYrWoqJifeOqBn_p/view?usp=drive_link)
 
 ### MoveIt Model
 
@@ -83,6 +83,8 @@ The custom IK/FK solver is necessary to motion plan accurately with MoveIt becau
 {% include image-gallery.html images="moveit_model.png" %} <br>
 
 ### MoveIt Motion Planning
+
+The MoveIt configuration file used for the motion planning can be found [here.](https://drive.google.com/file/d/15PKbxq1aJW2KkB3pjW7vSWw3S0Dr1D0Q/view?usp=drive_link)
 
 <!-- MoveIt motion planning demo -->
 <div style="margin: 2rem 0;">

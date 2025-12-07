@@ -43,7 +43,7 @@ This section is currently blank as my only Arduino has been damaged while moving
     <source src="{{ site.baseurl }}/_projects/stepperchoir/hallelujah_chorus.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
-</div>
+</div>>
 
 
 
