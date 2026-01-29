@@ -1,0 +1,13 @@
+---
+layout: wrapper
+permalink: /cad/
+---
+
+{% assign cad = site.projects | where: "path", "CAD/index.md" | first %}
+
+{% if cad %}
+  {{ cad.content }}
+{% else %}
+  <h1>CAD</h1>
+  <p>CAD page not found. Check the file path: <code>_projects/CAD/index.md</code></p>
+{% endif %}
