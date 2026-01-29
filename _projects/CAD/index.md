@@ -23,13 +23,23 @@ exclude_from_projects: true
 
 This page is a work in progress that hosts some of my otherwise-unmentioned CAD work. Some other examples of my project-related CAD work can be found in the [Projects]({{ site.baseurl }}/projects/) tab within:
 
-<div style="padding-left: 2rem;">
-  
-  - [Rapidly Deployable & Inflatable Hallway Barrier]({{ site.baseurl }}/_projects/capstone/)
-  - [Digitization, Design, and Fabrication of a Maxillary Implant]({{ site.baseurl }}/_projects/maxillaryimplant/)
-  - [3-DOF Robotic Arm]({{ site.baseurl }}/_projects/robotarm/) <br><br>
-
-</div> 
+<ul style="padding-left: 2rem;">
+  <li>
+    <a href="{{ site.baseurl }}/_projects/capstone/">
+      Rapidly Deployable & Inflatable Hallway Barrier
+    </a>
+  </li>
+  <li>
+    <a href="{{ site.baseurl }}/_projects/maxillaryimplant/">
+      Digitization, Design, and Fabrication of a Maxillary Implant
+    </a>
+  </li>
+  <li>
+    <a href="{{ site.baseurl }}/_projects/robotarm/">
+      3-DOF Robotic Arm
+    </a>
+  </li>
+</ul> <br><br>
 
 
 
