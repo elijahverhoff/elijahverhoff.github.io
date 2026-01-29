@@ -11,6 +11,7 @@ skills:
 - Rhinoceros
 
 main-image: /headerComp.png
+exclude_from_projects: true
 ---
 
 
