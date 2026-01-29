@@ -10,7 +10,7 @@ skills:
 - Fusion360
 - Rhinoceros
 
-main-image: /headerComp.webp
+main-image: /headerComp.png
 ---
 
 
@@ -64,6 +64,23 @@ This winding mechanism is designed to spin tapes of thermoplastics around a mand
     <source src="{{ site.baseurl }}/_projects/CAD/distroVid.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
+</div>
+
+And here is the drawing package of sheet metal flats for fabricator reference:
+
+<!-- Drawing package preview -->
+<div style="margin: 2rem 0;">
+  <a
+    href="{{ site.baseurl }}/_projects/CAD/distroPackage.pdf"
+    target="_blank"
+    style="display: block;"
+  >
+    <img
+      src="{{ site.baseurl }}/_projects/CAD/distroCover.png"
+      alt="Cable Distribution Raceway Drawing Package"
+      style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 0 12px rgba(0,0,0,0.3);"
+    />
+  </a>
 </div>
 
 
