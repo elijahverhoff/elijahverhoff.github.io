@@ -16,6 +16,23 @@ exclude_from_projects: true
 
 
 
+---
+
+
+# CAD Showcase
+
+This page is a work in progress that hosts some of my otherwise-unmentioned CAD work. Some other examples of my project-related CAD work can be found in the "Projects" tab within:
+
+- Rapidly Deployable & Inflatable Hallway Barrier
+- Digitization, Design, and Fabrication of a Maxillary Implant
+- 3-DOF Robotic Arm
+
+
+
+---
+
+
+
 ## Continuous Forming Machine (CFM)
 
 This features my work on the thermoplastic tape winder and a cable distribution raceway for a containerized CFM.
