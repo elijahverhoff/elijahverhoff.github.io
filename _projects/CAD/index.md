@@ -1,1 +1,88 @@
+---
+layout: post
 
+title: CAD showcase
+
+description: This page is a work in progress that hosts some of my otherwise-unmentioned CAD work.
+
+skills: 
+- SOLIDWORKS
+- Fusion360
+- Rhinoceros
+
+main-image: /headerComp.webp
+---
+
+
+
+## Continuous Forming Machine (CFM)
+
+This features my work on the thermoplastic tape winder and a cable distribution raceway for a containerized CFM.
+
+
+
+### Winder Full Assembly
+
+This winding mechanism is designed to spin tapes of thermoplastics around a mandrel stock about its center of rotation.
+
+<!-- SOLIDWORKS winder assembly video -->
+<div style="margin: 2rem 0;">
+  <video
+    controls
+    style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 0 12px rgba(0,0,0,0.3);"
+  >
+    <source src="{{ site.baseurl }}/_projects/CAD/winderAssemVid.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+
+
+### Winder Tape Laying Unit
+
+<!-- SOLIDWORKS TLU assembly video -->
+<div style="margin: 2rem 0;">
+  <video
+    controls
+    style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 0 12px rgba(0,0,0,0.3);"
+  >
+    <source src="{{ site.baseurl }}/_projects/CAD/tluVid.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+
+
+### Cable Distribution Raceway (sheet metal)
+
+<!-- SOLIDWORKS distro assembly video -->
+<div style="margin: 2rem 0;">
+  <video
+    controls
+    style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 0 12px rgba(0,0,0,0.3);"
+  >
+    <source src="{{ site.baseurl }}/_projects/CAD/distroVid.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+
+
+---
+
+
+
+## Test Vessel for Large Scale Additive Manufacturing (LAAM)
+
+UMaine is home to the world's largest 3D printer, making headlines around the US for printing and deploying a 3D printed boat. This model was commisioned on a slightly smaller scale for the purpose of optimizing large-scale 3D printing efficiency.
+
+<!-- SOLIDWORKS vessel assembly video -->
+<div style="margin: 2rem 0;">
+  <video
+    controls
+    style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 0 12px rgba(0,0,0,0.3);"
+  >
+    <source src="{{ site.baseurl }}/_projects/CAD/vesselVid.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
