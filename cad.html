@@ -1,13 +1,14 @@
 ---
 layout: wrapper
 permalink: /cad/
+title: CAD
 ---
 
-{% assign cad = site.projects | where: "path", "CAD/index.md" | first %}
+{% assign cad = site.projects | where_exp: "p", "p.path contains 'CAD/index.md'" | first %}
 
 {% if cad %}
   {{ cad.content }}
 {% else %}
   <h1>CAD</h1>
-  <p>CAD page not found. Check the file path: <code>_projects/CAD/index.md</code></p>
+  <p>Couldn’t find the CAD content. Expected it at <code>_projects/CAD/index.md</code>.</p>
 {% endif %}
