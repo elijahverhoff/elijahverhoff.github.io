@@ -23,9 +23,13 @@ exclude_from_projects: true
 
 This page is a work in progress that hosts some of my otherwise-unmentioned CAD work. Some other examples of my project-related CAD work can be found in the [Projects]({{ site.baseurl }}/projects/) tab within:
 
+<div style="padding-left: 2rem;">
+  
   - [Rapidly Deployable & Inflatable Hallway Barrier]({{ site.baseurl }}/_projects/capstone/)
   - [Digitization, Design, and Fabrication of a Maxillary Implant]({{ site.baseurl }}/_projects/maxillaryimplant/)
   - [3-DOF Robotic Arm]({{ site.baseurl }}/_projects/robotarm/)
+
+</div>
 
 
 
@@ -35,7 +39,7 @@ This page is a work in progress that hosts some of my otherwise-unmentioned CAD 
 
 ## Continuous Forming Machine (CFM)
 
-This features my work on the thermoplastic tape winder and a cable distribution raceway for a containerized CFM. <br>
+This features my work on the thermoplastic tape winder and a cable distribution raceway for a containerized CFM. <br><br><br>
 
 
 
