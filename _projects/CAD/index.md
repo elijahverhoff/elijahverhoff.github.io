@@ -21,11 +21,11 @@ exclude_from_projects: true
 
 # CAD Showcase
 
-This page is a work in progress that hosts some of my otherwise-unmentioned CAD work. Some other examples of my project-related CAD work can be found in the "Projects" tab within:
+This page is a work in progress that hosts some of my otherwise-unmentioned CAD work. Some other examples of my project-related CAD work can be found in the [Projects]({{ site.baseurl }}/_projects/) tab within:
 
-- Rapidly Deployable & Inflatable Hallway Barrier
-- Digitization, Design, and Fabrication of a Maxillary Implant
-- 3-DOF Robotic Arm
+- [Rapidly Deployable & Inflatable Hallway Barrier]({{ site.baseurl }}/_projects/capstone/)
+- [Digitization, Design, and Fabrication of a Maxillary Implant]({{ site.baseurl }}/_projects/maxillaryimplant/)
+- [3-DOF Robotic Arm]({{ site.baseurl }}/_projects/robotarm/)
 
 
 
