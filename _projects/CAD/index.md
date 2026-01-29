@@ -3,7 +3,7 @@ layout: post
 
 title: CAD showcase
 
-This page is a work in progress that hosts some of my otherwise-unmentioned CAD work.
+description: This page is a work in progress that hosts some of my otherwise-unmentioned CAD work.
 
 skills: 
 - SOLIDWORKS
