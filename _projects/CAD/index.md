@@ -27,9 +27,9 @@ This page is a work in progress that hosts some of my otherwise-unmentioned CAD 
   
   - [Rapidly Deployable & Inflatable Hallway Barrier]({{ site.baseurl }}/_projects/capstone/)
   - [Digitization, Design, and Fabrication of a Maxillary Implant]({{ site.baseurl }}/_projects/maxillaryimplant/)
-  - [3-DOF Robotic Arm]({{ site.baseurl }}/_projects/robotarm/)
+  - [3-DOF Robotic Arm]({{ site.baseurl }}/_projects/robotarm/) <br><br>
 
-</div>
+</div> 
 
 
 
