@@ -66,7 +66,7 @@ This winding mechanism is designed to spin tapes of thermoplastics around a mand
   </video>
 </div>
 
-And here is the drawing package of sheet metal flats for fabricator reference:
+And here is the drawing package of sheet metal flats for fabricator reference. Clicking the image will redirect you to the full package.
 
 <!-- Drawing package preview -->
 <div style="margin: 2rem 0;">
