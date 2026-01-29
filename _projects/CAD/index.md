@@ -35,7 +35,7 @@ This page is a work in progress that hosts some of my otherwise-unmentioned CAD 
 
 ## Continuous Forming Machine (CFM)
 
-This features my work on the thermoplastic tape winder and a cable distribution raceway for a containerized CFM.
+This features my work on the thermoplastic tape winder and a cable distribution raceway for a containerized CFM. <br>
 
 
 
@@ -110,6 +110,8 @@ And here is the drawing package of sheet metal flats for fabricator reference. C
 ## Test Vessel for Large Scale Additive Manufacturing (LAAM)
 
 UMaine is home to the world's largest 3D printer, making headlines around the US for printing and deploying a 3D printed boat. This model was commisioned on a slightly smaller scale for the purpose of optimizing large-scale 3D printing efficiency.
+
+For this project, I was given a `.obj` file as an example of the desired geometry for the vessel. I parameterized the 3D object in SOLIDWORKS to capture its geometry, and delivered a fully constrained 3D model that can be easily scaled, shelled, and edited.
 
 <!-- SOLIDWORKS vessel assembly video -->
 <div style="margin: 2rem 0;">
