@@ -39,7 +39,7 @@ This page is a work in progress that hosts some of my otherwise-unmentioned CAD 
 
 ## Continuous Forming Machine (CFM)
 
-This features my work on the thermoplastic tape winder and a cable distribution raceway for a containerized CFM. <br><br><br>
+This features my work on the thermoplastic tape winder and a cable distribution raceway for a containerized CFM. <br><br>
 
 
 
