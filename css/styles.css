@@ -133,6 +133,14 @@ pre {
   border-radius: 8px;
 }
 
+/* Force background for Rouge-highlighted blocks */
+.highlight pre,
+.highlighter-rouge pre,
+figure.highlight pre,
+div.highlight pre {
+  background-color: var(--code-block-bg) !important;
+}
+
 /* Don't apply inline padding/background to code blocks */
 pre code {
   background: none;
