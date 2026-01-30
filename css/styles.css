@@ -8,8 +8,18 @@
   --highlight-color: {{ site.colors.highlight }};
   --background-color: {{ site.colors.background }};
   --light-background-color: {{ site.colors.light_background }};
-  --inline-code-bg: rgba(42, 157, 143, 0.12);
+
+  /* Convert highlight hex -> "r, g, b" for rgba() usage */
+  --highlight-rgb: {{ site.colors.highlight | remove: "#" | slice: 0, 2 | prepend: "0x" | plus: 0 }},
+                   {{ site.colors.highlight | remove: "#" | slice: 2, 2 | prepend: "0x" | plus: 0 }},
+                   {{ site.colors.highlight | remove: "#" | slice: 4, 2 | prepend: "0x" | plus: 0 }};
+
+  /* Theme-derived code backgrounds */
+  --inline-code-bg: rgba(var(--highlight-rgb), 0.12);
+  --code-block-bg: rgba(var(--highlight-rgb), 0.18);
+  --inline-code-border: rgba(var(--highlight-rgb), 0.25);
 }
+
 
 /* Base typography */
 :root {
@@ -109,14 +119,15 @@ p code, li code {
 /* Inline code "pill" styling */
 p code, li code, a code {
   background-color: var(--inline-code-bg);
+  border: 1px solid var(--inline-code-border);
   padding: 0.12em 0.35em;
   border-radius: 6px;
   vertical-align: baseline;
-  border: 1px solid rgba(42, 157, 143, 0.25);
 }
 
 /* Block code layout */
 pre {
+  background-color: var(--code-block-bg);
   overflow-x: auto;
   white-space: pre;          /* keep formatting; horizontal scroll if needed */
   -webkit-overflow-scrolling: touch;
