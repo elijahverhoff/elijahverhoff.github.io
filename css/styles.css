@@ -138,6 +138,7 @@ pre {
 .highlighter-rouge,
 figure.highlight,
 div.highlight {
+  border-radius: 0 !important;
   background: transparent !important;
   padding: 0 !important;
   margin: 0.9em 0; /* optional: keep spacing consistent */
