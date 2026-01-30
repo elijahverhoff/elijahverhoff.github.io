@@ -133,14 +133,17 @@ pre {
   border-radius: 8px;
 }
 
-/* Force background for Rouge-highlighted blocks */
-.highlight pre,
-.highlighter-rouge pre,
-figure.highlight pre,
-div.highlight pre {
-  background-color: var(--code-block-bg) !important;
-  border: 1px solid var(--inline-code-border);
+/* Remove Rouge wrapper panel (pre is the styled panel) */
+.highlight,
+.highlighter-rouge,
+figure.highlight,
+div.highlight {
+  background: transparent !important;
+  padding: 0 !important;
+  margin: 0.9em 0; /* optional: keep spacing consistent */
+  border: 0 !important;
 }
+
 
 
 /* Don't apply inline padding/background to code blocks */
