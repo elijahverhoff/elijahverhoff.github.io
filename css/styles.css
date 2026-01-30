@@ -113,8 +113,8 @@ pre, code, kbd, samp,
 code {
   background-color: var(--inline-code-bg, var(--light-background-color)) !important;
   border: 1px solid var(--inline-code-border, var(--highlight-color)) !important;
-  padding: 0.15em 0.4em;
-  border-radius: 6px;
+  padding: 0.25em 0.4em;
+  border-radius: 4px;
   vertical-align: baseline;
 }
 
@@ -151,6 +151,30 @@ div.highlight pre {
   white-space: pre;
   -webkit-overflow-scrolling: touch;
   margin: 1em 0;
+}
+
+/* Indent guides for code blocks (every 4ch ≈ 4 spaces) */
+pre,
+.highlight pre,
+.highlighter-rouge pre,
+figure.highlight pre,
+div.highlight pre {
+  /* faint vertical guides */
+  background-image:
+    repeating-linear-gradient(
+      to right,
+      color-mix(in srgb, var(--highlight-color) 18%, transparent) 0,
+      color-mix(in srgb, var(--highlight-color) 18%, transparent) 1px,
+      transparent 1px,
+      transparent 4ch
+    );
+
+  /* keep your existing background color underneath */
+  background-color: var(--code-block-bg, var(--light-background-color)) !important;
+
+  /* align guides with text after padding */
+  background-origin: content-box;
+  background-clip: content-box;
 }
 
 /* Prevent inline pill styling inside code blocks */
