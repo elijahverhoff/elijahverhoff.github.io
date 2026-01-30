@@ -11,7 +11,7 @@
 
   /* Theme-derived code colors */
   --inline-code-bg: rgb(from var(--highlight-color) r g b / 0.16);
-  --code-block-bg: rgb(from var(--highlight-color) r g b / 0.22);
+  --code-block-bg: rgb(from var(--highlight-color) r g b / 0.20);
   --inline-code-border: rgb(from var(--highlight-color) r g b / 0.32);
 }
 
@@ -139,7 +139,9 @@ pre {
 figure.highlight pre,
 div.highlight pre {
   background-color: var(--code-block-bg) !important;
+  border: 1px solid var(--inline-code-border);
 }
+
 
 /* Don't apply inline padding/background to code blocks */
 pre code {
