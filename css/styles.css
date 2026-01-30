@@ -110,6 +110,7 @@ p code, li code {
   font-size: 0.95em;
 }
 
+/* Inline code pill */
 p code, li code, a code {
   background-color: var(--inline-code-bg);
   border: 1px solid var(--inline-code-border);
@@ -118,9 +119,9 @@ p code, li code, a code {
   vertical-align: baseline;
 }
 
+/* Base block code layout */
 pre {
   background-color: var(--code-block-bg);
-  border: 1px solid var(--inline-code-border);
   overflow-x: auto;
   white-space: pre;
   -webkit-overflow-scrolling: touch;
@@ -129,22 +130,35 @@ pre {
   border-radius: 8px;
 }
 
+/* Remove Rouge wrapper panel */
 .highlight,
 .highlighter-rouge,
 figure.highlight,
 div.highlight {
-  border-radius: 0 !important;
   background: transparent !important;
   padding: 0 !important;
   margin: 0 !important;
   border: 0 !important;
 }
 
+/* Re-apply block styling at Rouge specificity */
+.highlight pre,
+.highlighter-rouge pre,
+figure.highlight pre,
+div.highlight pre {
+  background-color: var(--code-block-bg) !important;
+  border: 1px solid var(--inline-code-border);
+  border-radius: 8px;
+  padding: 0.8em 1em;
+}
+
+/* Prevent double styling */
 pre code {
   background: none;
   padding: 0;
   border-radius: 0;
 }
+
 
 
 /* Mobile: gently shrink code more than body */
