@@ -8,7 +8,7 @@
   --highlight-color: {{ site.colors.highlight }};
   --background-color: {{ site.colors.background }};
   --light-background-color: {{ site.colors.light_background }};
-  --inline-code-bg: rgba(30, 64, 175, 0.08);
+  --inline-code-bg: rgba(42, 157, 143, 0.12);
 }
 
 /* Base typography */
@@ -112,13 +112,8 @@ p code, li code, a code {
   padding: 0.12em 0.35em;
   border-radius: 6px;
   vertical-align: baseline;
+  border: 1px solid rgba(42, 157, 143, 0.25);
 }
-p code, li code, a code {
-  vertical-align: baseline;
-  background-color: var(--inline-code-bg);
-  border: 1px solid rgba(30, 64, 175, 0.18);
-}
-
 
 /* Block code layout */
 pre {
