@@ -161,7 +161,6 @@ pre code {
 
 
 
-
 /* Mobile: gently shrink code more than body */
 @media (max-width: 640px) {
   :root { --code-scale: 0.78; }   /* try 0.78–0.86 if you want it smaller/bigger */
