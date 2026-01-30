@@ -11,7 +11,7 @@
 
   /* Theme-derived code colors */
   --inline-code-bg: rgb(from var(--highlight-color) r g b / 0.16);
-  --code-block-bg: rgb(from var(--highlight-color) r g b / 0.20);
+  --code-block-bg: rgb(from var(--highlight-color) r g b / 0.18);
   --inline-code-border: rgb(from var(--highlight-color) r g b / 0.32);
 }
 
