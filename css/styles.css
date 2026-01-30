@@ -9,18 +9,12 @@
   --background-color: {{ site.colors.background }};
   --light-background-color: {{ site.colors.light_background }};
 
-  {%- assign h = site.colors.highlight | remove: "#" -%}
-  {%- assign r = h | slice: 0, 2 | prepend: "0x" | plus: 0 -%}
-  {%- assign g = h | slice: 2, 2 | prepend: "0x" | plus: 0 -%}
-  {%- assign b = h | slice: 4, 2 | prepend: "0x" | plus: 0 -%}
-
-  --highlight-rgb: {{ r }}, {{ g }}, {{ b }};
-
-  /* Theme-derived code backgrounds (increase these a bit for your light mint bg) */
-  --inline-code-bg: rgba(var(--highlight-rgb), 0.16);
-  --code-block-bg: rgba(var(--highlight-rgb), 0.22);
-  --inline-code-border: rgba(var(--highlight-rgb), 0.32);
+  /* Theme-derived code colors */
+  --inline-code-bg: rgb(from var(--highlight-color) r g b / 0.16);
+  --code-block-bg: rgb(from var(--highlight-color) r g b / 0.22);
+  --inline-code-border: rgb(from var(--highlight-color) r g b / 0.32);
 }
+
 
 
 
