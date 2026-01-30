@@ -159,22 +159,21 @@ pre,
 .highlighter-rouge pre,
 figure.highlight pre,
 div.highlight pre {
+  background-color: var(--code-block-bg, var(--light-background-color)) !important;
+
   /* faint vertical guides */
   background-image:
     repeating-linear-gradient(
       to right,
-      color-mix(in srgb, var(--highlight-color) 18%, transparent) 0,
-      color-mix(in srgb, var(--highlight-color) 18%, transparent) 1px,
+      rgba(42, 157, 143, 0.18) 0,
+      rgba(42, 157, 143, 0.18) 1px,
       transparent 1px,
       transparent 4ch
     );
 
-  /* keep your existing background color underneath */
-  background-color: var(--code-block-bg, var(--light-background-color)) !important;
-
-  /* align guides with text after padding */
-  background-origin: content-box;
-  background-clip: content-box;
+  /* start the guides after your left padding (1.2em) */
+  background-position: 1.2em 0;
+  background-size: auto 100%;
 }
 
 /* Prevent inline pill styling inside code blocks */
