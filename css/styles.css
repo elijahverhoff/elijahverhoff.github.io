@@ -109,14 +109,21 @@ pre, code, kbd, samp,
                "Liberation Mono", "Courier New", monospace;
 }
 
-/* Inline code: size + pill styling (forced, with fallbacks) */
-p code, li code, a code {
-  font-size: 0.95em;
+/* Inline code pill (apply to ALL inline code spans) */
+code {
   background-color: var(--inline-code-bg, var(--light-background-color)) !important;
   border: 1px solid var(--inline-code-border, var(--highlight-color)) !important;
   padding: 0.15em 0.4em;
   border-radius: 6px;
   vertical-align: baseline;
+}
+
+/* Ensure Rouge-classed inline code still gets the pill */
+code.highlighter-rouge,
+code.language-plaintext,
+code[class*="language-"] {
+  background-color: var(--inline-code-bg, var(--light-background-color)) !important;
+  border: 1px solid var(--inline-code-border, var(--highlight-color)) !important;
 }
 
 /* Remove Rouge wrapper panel so there isn't a second "slab" */
@@ -146,7 +153,7 @@ div.highlight pre {
   margin: 1em 0;
 }
 
-/* Prevent inline styling from affecting code inside blocks */
+/* Prevent inline pill styling inside code blocks */
 pre code,
 .highlight pre code,
 .highlighter-rouge pre code,
