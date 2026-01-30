@@ -39,7 +39,7 @@ This page is a work in progress that hosts some of my otherwise-unmentioned CAD 
       3-DOF Robotic Arm
     </a>
   </li>
-</ul> <br><br>
+</ul><br> 
 
 
 
