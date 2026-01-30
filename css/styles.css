@@ -9,11 +9,12 @@
   --background-color: {{ site.colors.background }};
   --light-background-color: {{ site.colors.light_background }};
 
-  /* Theme-derived code colors */
-  --inline-code-bg: rgb(from var(--highlight-color) r g b / 0.16);
-  --code-block-bg: rgb(from var(--highlight-color) r g b / 0.14);
-  --inline-code-border: rgb(from var(--highlight-color) r g b / 0.32);
+  /* Code styling (theme-derived, GitHub Pages safe) */
+  --inline-code-bg: {{ site.colors.light_background }};
+  --inline-code-border: {{ site.colors.highlight }};
+  --code-block-bg: {{ site.colors.light_background }};
 }
+
 
 
 
@@ -106,50 +107,44 @@ pre, code, kbd, samp,
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
-p code, li code {
-  font-size: 0.95em;
-}
-
 /* Inline code pill */
 p code, li code, a code {
   background-color: var(--inline-code-bg);
   border: 1px solid var(--inline-code-border);
-  padding: 0.12em 0.35em;
+  padding: 0.15em 0.4em;   /* ← visibly increased */
   border-radius: 6px;
   vertical-align: baseline;
 }
 
-/* Base pre reset (no visual styling here) */
+/* Reset base pre */
 pre {
-  overflow-x: auto;
-  white-space: pre;
-  -webkit-overflow-scrolling: touch;
-  margin: 0.9em 0;
-  background: none;
+  margin: 1em 0;
   padding: 0;
+  background: none;
   border-radius: 0;
 }
 
-/* Remove Rouge wrapper panel */
+/* Remove Rouge wrapper */
 .highlight,
 .highlighter-rouge,
 figure.highlight,
 div.highlight {
-  background: transparent !important;
+  background: none !important;
   padding: 0 !important;
   margin: 0 !important;
   border: 0 !important;
 }
 
-/* Final block styling (single source of truth) */
+/* Final block styling */
 .highlight pre,
 .highlighter-rouge pre,
 figure.highlight pre,
 div.highlight pre {
-  background-color: var(--code-block-bg) !important;
+  background-color: var(--code-block-bg);
   border: 1px solid var(--inline-code-border);
   border-radius: 8px;
-  padding: 0.75em 1em;   /* ← this is your block padding */
+  padding: 1em 1.2em;   /* ← clearly visible padding */
+  overflow-x: auto;
 }
 
 /* Prevent inline styling inside blocks */
