@@ -99,59 +99,63 @@ h6 { font-size: 1.06em; }
   --code-scale: 0.92;
 }
 
+/* Make code track body size everywhere */
 pre, code, kbd, samp,
 .highlight pre, .highlighter-rouge pre, figure.highlight pre,
 .highlight code, .highlighter-rouge code {
   font-size: calc(var(--base-font-size) * var(--code-scale));
   line-height: 1.45;
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+               "Liberation Mono", "Courier New", monospace;
 }
 
-/* Inline code pill */
+/* Inline code: size + pill styling (forced, with fallbacks) */
 p code, li code, a code {
-  background-color: var(--inline-code-bg);
-  border: 1px solid var(--inline-code-border);
-  padding: 0.15em 0.4em;   /* ← visibly increased */
+  font-size: 0.95em;
+  background-color: var(--inline-code-bg, var(--light-background-color)) !important;
+  border: 1px solid var(--inline-code-border, var(--highlight-color)) !important;
+  padding: 0.15em 0.4em;
   border-radius: 6px;
   vertical-align: baseline;
 }
 
-/* Reset base pre */
-pre {
-  margin: 1em 0;
-  padding: 0;
-  background: none;
-  border-radius: 0;
-}
-
-/* Remove Rouge wrapper */
+/* Remove Rouge wrapper panel so there isn't a second "slab" */
 .highlight,
 .highlighter-rouge,
 figure.highlight,
 div.highlight {
-  background: none !important;
+  background: transparent !important;
   padding: 0 !important;
   margin: 0 !important;
   border: 0 !important;
 }
 
-/* Final block styling */
+/* Code blocks: style the actual <pre> (forced, with fallbacks) */
+pre,
 .highlight pre,
 .highlighter-rouge pre,
 figure.highlight pre,
 div.highlight pre {
-  background-color: var(--code-block-bg);
-  border: 1px solid var(--inline-code-border);
-  border-radius: 8px;
-  padding: 1em 1.2em;   /* ← clearly visible padding */
+  background-color: var(--code-block-bg, var(--light-background-color)) !important;
+  border: 1px solid var(--inline-code-border, var(--highlight-color)) !important;
+  border-radius: 8px !important;
+  padding: 1em 1.2em !important;
   overflow-x: auto;
+  white-space: pre;
+  -webkit-overflow-scrolling: touch;
+  margin: 1em 0;
 }
 
-/* Prevent inline styling inside blocks */
-pre code {
-  background: none;
-  padding: 0;
-  border-radius: 0;
+/* Prevent inline styling from affecting code inside blocks */
+pre code,
+.highlight pre code,
+.highlighter-rouge pre code,
+figure.highlight pre code,
+div.highlight pre code {
+  background: none !important;
+  border: 0 !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
 }
 
 
