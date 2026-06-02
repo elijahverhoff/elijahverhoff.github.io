@@ -11,7 +11,7 @@ skills:
 - Rhinoceros
 
 main-image: /headerComp.png
-exclude_from_projects: true
+exclude_from_projects: false
 ---
 
 
@@ -21,7 +21,7 @@ exclude_from_projects: true
 
 # CAD Showcase
 
-This page is a work in progress that hosts some of my otherwise-unmentioned CAD work. Some other examples of my project-related CAD work can be found in the [Projects]({{ site.baseurl }}/projects/) tab within:
+This page is a living page that hosts some of my otherwise-unmentioned CAD work. Some other examples of my project-related CAD work can be found in the [Projects]({{ site.baseurl }}/projects/) tab within:
 
 <ul style="padding-left: 2rem;">
   <li>
