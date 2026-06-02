@@ -15,15 +15,15 @@ title: Elijah Verhoff's Portfolio # This is what shows up in the tab of the brow
 name: Elijah Verhoff
 headline: B.S. Mechanical Engineering, University of Maine
 description: >- # dont remove this line. this will ignore all new lines until the next section
-  "I'm a Mechanical Engineer and graduate of the University of Maine (Orono), focused on mechanical 
-  design with a concentration in robotics and controls. I like problems that span disciplines: designing 
+  I'm a Mechanical Engineer and graduate of the University of Maine (Orono), focused on mechanical 
+  design with a concentration in robotics and controls. I like problems that span disciplines - designing 
   electromechanical systems, building and simulating robots, and turning physical hardware into something 
   that responds intelligently to its environment. Most recently I've put that to work as a Student Specialist 
   at the Advanced Structures and Composites Center, designing electromechanical systems and researching 
   advanced composite structures. <br><br>
   
   Outside of formal work, my projects tend to sit where engineering meets the arts. I'm now looking for roles 
-  in robotics, automation, or cross-disciplinary engineering where I can keep building at that intersection."
+  in robotics, automation, or cross-disciplinary engineering where I can keep building at that intersection.
 
 # Place your profile image in /assets/images/profile-image/folder and edit the file name
 profile_image: ./assets/images/profile-image/Headshot.png
