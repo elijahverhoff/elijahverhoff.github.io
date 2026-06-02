@@ -16,10 +16,6 @@ exclude_from_projects: true
 
 
 
----
-
-
-
 # CAD Showcase
 
 This page is a living page that hosts some of my otherwise-unmentioned CAD work. Some other examples of my project-related CAD work can be found in the [Projects]({{ site.baseurl }}/projects/) tab within:
