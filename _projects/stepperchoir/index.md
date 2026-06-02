@@ -13,6 +13,9 @@ main-image: /headerComp_PLACEHOLDER.webp
 ---
 
 
+> Programmed four stepper motors to play synchronized polyphonic music from an Arduino, using non-blocking step scheduling to run all voices concurrently. Built a companion Python parser that extracts pitch, duration, and key-signature data straight from MusicXML files; working from raw note data rather than the usual MIDI shortcut.
+
+
 ## Goals
 
 The purpose of this project was to gain a deeper understanding of PLC programming. Many guides are available online which outline how to interface stepper motors with an Arduino for this purpose, using MIDI as an input to easily track all note data. To craft my own previously undocumented solution, I decided to use raw note data as the program's input.
@@ -25,7 +28,6 @@ The purpose of this project was to gain a deeper understanding of PLC programmin
  - Parser: MusicXML - interleaved note/duration/tempo CSVs
 
 
-<!-- REMOVE THIS TO RESTORE
 
 ---
 
@@ -33,12 +35,9 @@ The purpose of this project was to gain a deeper understanding of PLC programmin
 
 ## Demo
 
-This section is currently blank as my only Arduino has been damaged while moving between apartments. I intend to include a demo of this project and update its media by late December, 2025.
+A demo video is in progress. My Arduino was damaged during a move, and this section will be updated once the hardware is rebuilt and recorded.
 
 <!-- choir demo video -->
-
-<!-- REMOVE THIS TO RESTORE
-
 <div style="margin: 2rem 0;">
   <video
     controls
@@ -49,7 +48,7 @@ This section is currently blank as my only Arduino has been damaged while moving
   </video>
 </div>
 
-REMOVE THIS TO RESTORE -->
+
 
 ---
 
@@ -168,7 +167,7 @@ void handleNoteChange(byte motorNum, byte stepPin, int& motorVar) {
 
 Just like XML, MusicXML stores information within element blocks. Locating the information necessary for this project requires the parser to iterate over each <part> to produce per-part CSVs. For each part, it collects three parallel sequences: notes, durations, and tempos. The parsing occurs in the following order:
 1. For each part, gather key signature information for each measure. This is used to denote which notes are sharp or flat.
-2. In each measure, gather all pitches, durations, and any supplimentary accidentals. If there is a rest, append the pitch array with a 0.
+2. In each measure, gather all pitches, durations, and any supplementary accidentals. If there is a rest, append the pitch array with a 0.
 3. Apply key signature details to gathered notes. For example, in the key of F major each 'B' note should be flat, unless otherwise specified by a "natural" symbol.
 
 A CSV for each part is generated for notes and their durations.
