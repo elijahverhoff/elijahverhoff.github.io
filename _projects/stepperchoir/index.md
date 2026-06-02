@@ -29,15 +29,18 @@ The purpose of this project was to gain a deeper understanding of PLC programmin
 
 
 
+<!-- REMOVE THIS TO RESTORE
+
 ---
-
-
 
 ## Demo
 
 A demo video is in progress. My Arduino was damaged during a move, and this section will be updated once the hardware is rebuilt and recorded.
 
 <!-- choir demo video -->
+
+<!-- REMOVE THIS TO RESTORE
+
 <div style="margin: 2rem 0;">
   <video
     controls
@@ -48,7 +51,7 @@ A demo video is in progress. My Arduino was damaged during a move, and this sect
   </video>
 </div>
 
-
+REMOVE THIS TO RESTORE -->
 
 ---
 
