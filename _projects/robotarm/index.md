@@ -20,6 +20,9 @@ main-image: /headerComp.webp
 ---
 
 
+> Designed, simulated, and fabricated a 3R-DOF robotic arm from scratch — modeling it in SOLIDWORKS, solving the closed-loop parallelogram four-bar linkage with a custom FK/IK solver, and validating motion planning in MoveIt 2. Built to deliver a 1 lb payload at a 1 ft reach.
+
+
 
 ## Goals
 
@@ -99,9 +102,8 @@ The MoveIt configuration file used for the motion planning can be found [here.](
 
 ## Fabrication and Assembly
 
-<!-- prototype assembly -->
 {% include image-gallery.html images="fabrication-assembly.png" %} <br>
 
 All links and structural components were fabricated using FFF 3D printing, chosen for its accessibility and quick iteration when refining part geometry. The components were then assembled into the full arm shown above.
 
-Final actuation testing was left incomplete: the threaded rods specified for the revolute joints did not arrive before the end of the course, and the motors were never mounted. To validate the geometry in the meantime, I performed a dry-fit assembly using toothpicks as temporary joint pins in place of the threaded rods. This confirmed that the printed linkages, including the parallelogram four-bar mechanism, articulate freely and achieve the full intended range of motion across all three degrees of freedom, and confirmed that the end effector manipulates as intended. With the mechanical design validated, the remaining work is limited to installing the threaded rods and servo motors to bring the arm under active control.
+Final actuation testing was left incomplete: the threaded rods specified for the revolute joints did not arrive before the end of the course, and the motors were never mounted. To validate the geometry in the meantime, I performed a dry-fit assembly using toothpicks as temporary joint pins in place of the threaded rods. This confirmed that the printed linkages, including the parallelogram four-bar mechanism, articulate freely and achieve the full intended range of motion across all three degrees of freedom, and also confirmed that the end effector articulates as intended. With the mechanical design validated, the remaining work is limited to installing the threaded rods and servo motors to bring the arm under active control.
