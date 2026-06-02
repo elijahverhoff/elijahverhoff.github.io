@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Robotic Percussion Driven by a Neural Network
-description: "Trained a causal temporal convolutional network for real-time beat tracking (0.855 test F-measure) and drove an Arduino-controlled servo to strike in time with music, synchronizing to within ~15 ms; below the human "just-noticeable-difference" for rhythmic error."
+description: Trained a causal temporal convolutional network for real-time beat tracking (0.855 test F-measure) and drove an Arduino-controlled servo to strike in time with music, synchronizing to within ~15 ms; below the human 'just-noticeable-difference' for rhythmic error.
 skills:
 - PyTorch
 - Deep Learning
