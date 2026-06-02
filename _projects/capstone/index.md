@@ -9,7 +9,7 @@ skills:
 - Literature review
 - Mechanical testing of materials
 - Project management & planning
-- Client communicaation
+- Client communication
 - Solenoid valves
 main-image: /headerComp.webp
 ---
@@ -22,7 +22,7 @@ To satisfy the objectives of this complex multidimensional project, our team ele
 
 ## Controls
 
-An imperitive attribute of the barrier is that it must be deployable by a single, untrained end-user as quickly as possible. With only user activation required, I developed a safety-critical system which autonomously controls barrier deployment through a series of states with a Finite State Machine in Arduino IDE. This system directs the flow of compressed air at 2000psi with solenoid valves to various pneumatic components, and receives feedback from inline pressure transducers to determine when to switch states.
+An imperative attribute of the barrier is that it must be deployable by a single, untrained end-user as quickly as possible. With only user activation required, I developed a safety-critical system which autonomously controls barrier deployment through a series of states with a Finite State Machine in Arduino IDE. This system directs the flow of compressed air at 2000psi with solenoid valves to various pneumatic components, and receives feedback from inline pressure transducers to determine when to switch states.
 
 
 
@@ -103,7 +103,7 @@ switch (state) {
 
 
 ### Emergency Stop Monitoring
-The emergency stop runs independetly every loop iteration prior to the FSM to ensure the highest priority. It additionally contains a stable-hold condition which allows the system to reboot easily back to setup().
+The emergency stop runs independently every loop iteration prior to the FSM to ensure the highest priority. It additionally contains a stable-hold condition which allows the system to reboot easily back to setup().
 
 ```cpp
 if (digitalRead(emergency_stop) == LOW) {
@@ -192,7 +192,7 @@ Led systems-level research synthesis to unify team literature reviews into a sin
 
 ## Communication
 
-Scheduled and coordinated meetings with our client from Sandia National Laboratories to solidly define project objectives, constraints, and goals. Ensured consistent updates of the project's progress and timeline were passed along to the client. Kept updated Gantt charts and manufacturing timelines to maintain equal expectations between the team and our client.
+Scheduled and coordinated meetings with our client from Sandia National Laboratories to concretely define project objectives, constraints, and goals. Ensured consistent updates of the project's progress and timeline were passed along to the client. Kept updated Gantt charts and manufacturing timelines to maintain equal expectations between the team and our client.
 
 ### Progress Documentation
 
