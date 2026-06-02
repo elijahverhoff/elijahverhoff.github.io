@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Rapidly Deployable & Inflatable Hallway Barrier
-description: Designed and delivered a single-user-deployable inflatable hallway barrier for Sandia National Laboratories over two semesters with a five-person team. Led controls, research, and client communication: building a safety-critical Arduino finite state machine that sequences pneumatic deployment from compressed-air supply using solenoid valves and inline pressure feedback.
+description: "Designed and delivered a single-user-deployable inflatable hallway barrier for Sandia National Laboratories over two semesters with a five-person team. Led controls, research, and client communication: building a safety-critical Arduino finite state machine that sequences pneumatic deployment from compressed-air supply using solenoid valves and inline pressure feedback."
 skills: 
 - Control system design
 - Finite State Machines
