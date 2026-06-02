@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Arduino Controlled Stepper Motor Choir
-description:  Developed a program in Arduino IDE which modularly controls stepper motors to create polyphonic music. Created an accompanying Python script which withdraws note data (frequency, duration, accidentals, etc.) from music XML files and organizes them into an Excel spreadsheet.
+description: Programmed four stepper motors to play synchronized polyphonic music from an Arduino, using non-blocking step scheduling to run all voices concurrently. Built a companion Python parser that extracts pitch, duration, and key-signature data straight from MusicXML files; working from raw note data rather than the usual MIDI shortcut.
 skills: 
 - Python
 - Arduino
@@ -12,8 +12,6 @@ skills:
 main-image: /headerComp_PLACEHOLDER.webp
 ---
 
-
-> Programmed four stepper motors to play synchronized polyphonic music from an Arduino, using non-blocking step scheduling to run all voices concurrently. Built a companion Python parser that extracts pitch, duration, and key-signature data straight from MusicXML files; working from raw note data rather than the usual MIDI shortcut.
 
 
 ## Goals
