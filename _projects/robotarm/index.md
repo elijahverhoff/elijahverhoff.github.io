@@ -3,7 +3,7 @@ layout: post
 
 title: 3-DOF Robotic Arm
 
-description: Outlines the design, simulation, and fabrication of a 3-DOF robotic manipulator.
+description: "Designed, simulated, and fabricated a 3R-DOF robotic arm from scratch: modeling it in SOLIDWORKS, solving the closed-loop parallelogram four-bar linkage with a custom FK/IK solver, and validating motion planning in MoveIt 2. Built to deliver a 1 lb payload at a 1 ft reach."
 
 skills: 
 - Mobile Robotics
@@ -18,9 +18,6 @@ skills:
 
 main-image: /headerComp.webp
 ---
-
-
-> Designed, simulated, and fabricated a 3R-DOF robotic arm from scratch — modeling it in SOLIDWORKS, solving the closed-loop parallelogram four-bar linkage with a custom FK/IK solver, and validating motion planning in MoveIt 2. Built to deliver a 1 lb payload at a 1 ft reach.
 
 
 
