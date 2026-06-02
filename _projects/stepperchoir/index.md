@@ -25,6 +25,7 @@ The purpose of this project was to gain a deeper understanding of PLC programmin
  - Parser: MusicXML - interleaved note/duration/tempo CSVs
 
 
+<!-- REMOVE THIS TO RESTORE
 
 ---
 
@@ -35,6 +36,9 @@ The purpose of this project was to gain a deeper understanding of PLC programmin
 This section is currently blank as my only Arduino has been damaged while moving between apartments. I intend to include a demo of this project and update its media by late December, 2025.
 
 <!-- choir demo video -->
+
+<!-- REMOVE THIS TO RESTORE
+
 <div style="margin: 2rem 0;">
   <video
     controls
@@ -45,7 +49,7 @@ This section is currently blank as my only Arduino has been damaged while moving
   </video>
 </div>>
 
-
+REMOVE THIS TO RESTORE -->
 
 ---
 
