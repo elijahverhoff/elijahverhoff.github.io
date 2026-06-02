@@ -22,7 +22,7 @@ To satisfy the objectives of this complex multidimensional project, our team ele
 
 ## Controls
 
-An imperative attribute of the barrier is that it must be deployable by a single, untrained end-user as quickly as possible. With only user activation required, I developed a safety-critical system which autonomously controls barrier deployment through a series of states with a Finite State Machine in Arduino IDE. This system directs the flow of compressed air at 2000psi with solenoid valves to various pneumatic components, and receives feedback from inline pressure transducers to determine when to switch states.
+An imperative attribute of the barrier is that it must be deployable by a single, untrained end-user as quickly as possible. With only user activation required, I developed a safety-critical system which autonomously controls barrier deployment through a series of states with a Finite State Machine in Arduino IDE. This system directs the flow of compressed air from a high-pressure air cylinder with solenoid valves to various pneumatic components, and receives feedback from inline pressure transducers to determine when to switch states.
 
 
 
