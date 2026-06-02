@@ -50,7 +50,7 @@ The defining constraint is **causality**. A model intended to drive hardware fro
 
 ## The Model
 
-The network operates on log-mel spectrograms computed at 100 frames per second (22,050 Hz audio, 81 mel bins). A 2D convolutional frontend (three Conv2d → BatchNorm → ReLU → MaxPool blocks) progressively collapses the frequency axis from 81 bins down to 3 while expanding channel depth, after which the representation is flattened into a 1D time series. That series passes through six residual TCN blocks with dilations of 1, 2, 4, 8, 16, and 32 and a kernel size of 5, and a final 1×1 convolution emits a single logit per frame.
+The network operates on log-mel spectrograms computed at 100 frames per second (22,050 Hz audio, 81 mel bins). A 2D convolutional frontend (three Conv2d > BatchNorm > ReLU > MaxPool blocks) progressively collapses the frequency axis from 81 bins down to 3 while expanding channel depth, after which the representation is flattened into a 1D time series. That series passes through six residual TCN blocks with dilations of 1, 2, 4, 8, 16, and 32 and a kernel size of 5, and a final 1×1 convolution emits a single logit per frame.
 
 Causality is enforced by **left-only padding** of length `(kernel_size − 1) × dilation` in each block, so a given output frame can only ever depend on frames at or before it. The same code path supports a non-causal variant by switching to symmetric padding, which made the causal-vs-non-causal ablation a clean, controlled comparison.
 
