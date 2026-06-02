@@ -14,6 +14,8 @@ skills:
 main-image: /headerComp.webp
 ---
 
+> Designed and delivered a single-user-deployable inflatable hallway barrier for Sandia National Laboratories over two semesters with a five-person team. Led controls, research, and client communication: building a safety-critical Arduino finite state machine that sequences pneumatic deployment from compressed-air supply using solenoid valves and inline pressure feedback.
+
 # Individual Contributions
 
 To satisfy the objectives of this complex multidimensional project, our team elected to designate leads for various aspects of design and manufacturing based on each person's strengths. I was delegated as the lead for controls, research / technical writing, and client communication.
@@ -192,7 +194,7 @@ Led systems-level research synthesis to unify team literature reviews into a sin
 
 ## Communication
 
-Scheduled and coordinated meetings with our client from Sandia National Laboratories to concretely define project objectives, constraints, and goals. Ensured consistent updates of the project's progress and timeline were passed along to the client. Kept updated Gantt charts and manufacturing timelines to maintain equal expectations between the team and our client.
+Scheduled and coordinated meetings with our client from Sandia National Laboratories to clearly define project objectives, constraints, and goals. Ensured consistent updates of the project's progress and timeline were passed along to the client. Kept updated Gantt charts and manufacturing timelines to maintain equal expectations between the team and our client.
 
 ### Progress Documentation
 
