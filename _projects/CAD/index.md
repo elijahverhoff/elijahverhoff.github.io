@@ -3,7 +3,7 @@ layout: post
 
 title: CAD showcase
 
-description: This page is a work in progress that hosts some of my otherwise-unmentioned CAD work.
+description: A collection of standalone SOLIDWORKS, Fusion 360, and Rhinoceros work from my role at UMaine’s Advanced Structures and Composites Center — including a thermoplastic tape winder, a sheet-metal cable distribution raceway with a full fabrication drawing package, and a fully parameterized test vessel for large-scale additive manufacturing.
 
 skills: 
 - SOLIDWORKS
@@ -19,7 +19,6 @@ exclude_from_projects: true
 ---
 
 
-> A collection of standalone SOLIDWORKS, Fusion 360, and Rhinoceros work from my role at UMaine’s Advanced Structures and Composites Center — including a thermoplastic tape winder, a sheet-metal cable distribution raceway with a full fabrication drawing package, and a fully parameterized test vessel for large-scale additive manufacturing.
 
 # CAD Showcase
 
