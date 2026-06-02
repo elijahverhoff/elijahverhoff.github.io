@@ -17,10 +17,13 @@ main-image: /headerComp.webp
 ---
 
 
+> Built a full perception-to-control pipeline on a Jetson Nano Jetbot running ROS 2: a calibrated CSI camera detects ARUCO markers, estimates their 3D pose, and a custom Python controller drives the robot to autonomously orient toward and approach the tag, slowing as it nears to avoid overshoot.
+
+
 
 ## Goals
 
-This project employs perception and control logic a Jetbot. It showcases use of Jetbot's onboard CSI camera to detect AR tags, estimate their 3D pose, and then command the robot so it automatically turns and drives toward the marker. The focus was on integrating camera streaming, calibration, pose estimation, and closed-loop control into a single repeatable workflow.
+This project employs perception and control logic on a Jetbot. It showcases use of Jetbot's onboard CSI camera to detect AR tags, estimate their 3D pose, and then command the robot so it automatically turns and drives toward the marker. The focus was on integrating camera streaming, calibration, pose estimation, and closed-loop control into a single repeatable workflow.
 
 ### Highlights
 
