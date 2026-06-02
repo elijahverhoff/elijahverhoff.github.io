@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Jetbot Control with AR Tags and 3D Pose Estimation
-description:  Used a Jetbot running ROS 2 on a Jetson Nano to calibrate a CSI camera, detect ARUCO markers, estimate their 3D pose, and drive the robot relative to the tag.
+description:  "Built a full perception-to-control pipeline on a Jetson Nano Jetbot running ROS 2: a calibrated CSI camera detects ARUCO markers, estimates their 3D pose, and a custom Python controller drives the robot to autonomously orient toward and approach the tag, slowing as it nears to avoid overshoot."
 skills: 
 - ROS 2
 - Jetbot / Jetson Nano
@@ -15,9 +15,6 @@ skills:
 - RViz2 Visualization
 main-image: /headerComp.webp
 ---
-
-
-> Built a full perception-to-control pipeline on a Jetson Nano Jetbot running ROS 2: a calibrated CSI camera detects ARUCO markers, estimates their 3D pose, and a custom Python controller drives the robot to autonomously orient toward and approach the tag, slowing as it nears to avoid overshoot.
 
 
 
