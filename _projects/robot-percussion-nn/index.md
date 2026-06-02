@@ -28,7 +28,7 @@ main-image: /headerComp.webp
   </iframe>
 </div>
 
-
+> Repository with trained model, training code, and analytical report can be found [here](https://github.com/elijahverhoff/robot-percussion-nn).
 
 ## Goals
 
