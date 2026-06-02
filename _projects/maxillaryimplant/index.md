@@ -14,6 +14,9 @@ main-image: /headerComp.webp
 ---
 
 
+> Reverse-engineered a patient-specific maxillary implant and denture directly from medical imaging data — segmenting scans in ITK-SNAP, repairing and reconstructing the mesh into NURBS surfaces in Rhinoceros, and producing an SLA-printed prototype contoured to the subject’s anatomy. Documented as a complete, repeatable start-to-finish workflow.
+
+
 
 ## Goals
 
@@ -40,7 +43,7 @@ My goal is to convert the MRI data into a usable 3D model of the subject's maxil
 
 {% include image-gallery.html images="segmentation.png" %} <br>
 
-Once the region of interest is isolated, I contrast the region to visually separate hard bone tissue from softer tissues like skin and fat. With the teeth and maxilla are clearly differentiated from surrounding tissue, I used ITK-SNAP's thresholding feature to place region-growing nodes throughout the teeth and maxilla. 
+Once the region of interest is isolated, I contrast the region to visually separate hard bone tissue from softer tissues like skin and fat. With the teeth and maxilla clearly differentiated from surrounding tissue, I used ITK-SNAP's thresholding feature to place region-growing nodes throughout the teeth and maxilla. 
 
 {% include image-gallery.html images="isolation.png" %} <br>
 
