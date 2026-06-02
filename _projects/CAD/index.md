@@ -11,13 +11,15 @@ skills:
 - Rhinoceros
 
 main-image: /headerComp.png
-exclude_from_projects: false
+exclude_from_projects: true
 ---
 
 
 
 ---
 
+
+> A collection of standalone SOLIDWORKS, Fusion 360, and Rhinoceros work from my role at UMaine’s Advanced Structures and Composites Center — including a thermoplastic tape winder, a sheet-metal cable distribution raceway with a full fabrication drawing package, and a fully parameterized test vessel for large-scale additive manufacturing.
 
 # CAD Showcase
 
@@ -123,7 +125,7 @@ And here is the drawing package of sheet metal flats for fabricator reference. C
 
 ## Test Vessel for Large Scale Additive Manufacturing (LAAM)
 
-UMaine is home to the world's largest 3D printer, making headlines around the US for fabricating and deploying a 3D printed boat. This model was commisioned on a slightly smaller scale for the purpose of optimizing large-scale 3D printing efficiency. <br><br>
+UMaine is home to the world's largest 3D printer, making headlines around the US for fabricating and deploying a 3D printed boat. This model was commissioned on a slightly smaller scale for the purpose of optimizing large-scale 3D printing efficiency. <br><br>
 
 For this project, I was given a `.obj` file as an example of the desired geometry for the vessel. I parameterized the 3D object in SOLIDWORKS to capture its geometry, and delivered a fully constrained 3D model that can be easily scaled, shelled, and edited.
 
