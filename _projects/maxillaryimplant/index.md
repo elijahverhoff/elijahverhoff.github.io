@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Digitization, Design, and Fabrication of a Maxillary Implant
-description:  Created a patient-specific maxillary implant and denture from medical imaging data. Extracted anatomical data into a mesh to form a 3D model, refined the mesh for manufacturability, and produced an SLA 3D printed prototype.
+description:  "Reverse-engineered a patient-specific maxillary implant and denture directly from medical imaging data: segmenting scans in ITK-SNAP, repairing and reconstructing the mesh into NURBS surfaces in Rhinoceros, and producing an SLA-printed prototype contoured to the subject’s anatomy. Documented as a complete, repeatable start-to-finish workflow."
 skills: 
 - Mesh Optimization
 - NURBS Surface Modeling
@@ -12,9 +12,6 @@ skills:
 - Medical Image Segmentation
 main-image: /headerComp.webp
 ---
-
-
-> Reverse-engineered a patient-specific maxillary implant and denture directly from medical imaging data: segmenting scans in ITK-SNAP, repairing and reconstructing the mesh into NURBS surfaces in Rhinoceros, and producing an SLA-printed prototype contoured to the subject’s anatomy. Documented as a complete, repeatable start-to-finish workflow.
 
 
 
