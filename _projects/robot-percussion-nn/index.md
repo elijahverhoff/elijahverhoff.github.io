@@ -20,11 +20,12 @@ main-image: /headerComp.webp
 
 <!-- Project overview — 3-minute explainer video. Hosted on Google Drive. -->
 <div style="margin: 2rem 0;">
-  <iframe
-    src="https://drive.google.com/file/d/1qecCG8x6ITU950NMUBe_pkGRXNBVxNBn/preview"
-    style="width: 100%; aspect-ratio: 16 / 9; border: none; border-radius: 8px; box-shadow: 0 0 12px rgba(0,0,0,0.3);"
-    allow="autoplay"
-    allowfullscreen>
+  <iframe width
+    src="https://www.youtube.com/embed/yTpg98g7568?si=tpogeX5i9AYzsJ2R"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
   </iframe>
 </div>
 
