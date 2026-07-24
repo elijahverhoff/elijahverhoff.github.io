@@ -21,7 +21,7 @@ main-image: /headerComp.webp
 <!-- Project overview — 3-minute explainer video. Hosted on Google Drive. -->
 <div style="margin: 2rem 0;">
   <iframe
-    src="https://drive.google.com/file/d/FILE_ID_HERE/preview"
+    src="https://drive.google.com/file/d/1qecCG8x6ITU950NMUBe_pkGRXNBVxNBn/preview"
     style="width: 100%; aspect-ratio: 16 / 9; border: none; border-radius: 8px; box-shadow: 0 0 12px rgba(0,0,0,0.3);"
     allow="autoplay"
     allowfullscreen>
