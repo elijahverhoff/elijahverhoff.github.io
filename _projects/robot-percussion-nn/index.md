@@ -19,15 +19,9 @@ main-image: /headerComp.webp
 
 
 <!-- Project overview — 3-minute explainer video. Hosted on Google Drive. -->
-<div style="margin: 2rem 0;">
-  <iframe width
-    src="https://www.youtube.com/embed/yTpg98g7568?si=tpogeX5i9AYzsJ2R"
-    title="YouTube video player"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
-  </iframe>
-</div>
+
+{% include youtube-video.html id="yTpg98g7568" %}
+
 
 > Repository with trained model, training code, and analytical report can be found [here](https://github.com/elijahverhoff/robot-percussion-nn).
 
